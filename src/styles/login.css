@@ -1,19 +1,66 @@
 .login-section {
     width: 38%; /*547 px*/
-    margin: 149px auto;
+    margin: 14vh auto;
     position: relative;
-    /* background-color: red; */
-    padding-top: 166px;
+    padding-top: 15vh;
+}
+
+@media (max-width: 1279px) {
+    .login-section {
+        width: 45%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .login-section {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .login-section {
+        width: 59%; /*604px*/
+    }
+}
+
+@media (max-width: 824px) {
+    .login-section {
+        width: 70%; /*604px*/
+    }
+}
+
+@media (max-width: 696px) {
+    .login-section {
+        width: 86%; /*604px*/
+    }
+}
+
+@media (max-width: 565px) {
+    .login-section {
+        width: 95%; /*604px*/
+    }
+}
+
+@media (width: 640px) and (height: 360px) {
+    .login-section {
+        padding-top: 5vh;
+    }
 }
 
 .top-shape {
-    width: 43%; /*235 px*/
+    width: 43%;
     aspect-ratio: 1;
     position: absolute;
     top: 0;
     left: 0;
     display: block;
     z-index: 0;
+}
+
+@media (max-width: 1024px) {
+    .top-shape {
+        width: 28%;
+    }
 }
 
 .login-form {
@@ -26,6 +73,18 @@
     margin-right: auto;
 }
 
+@media (max-width: 339px) {
+    .login-form {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 298px) {
+    .login-form {
+        padding: 8px;
+    }
+}
+
 .login-form h3 {
     font-family: "Inter";
     font-weight: 700;
@@ -33,7 +92,7 @@
     font-size: 2.8rem;
     line-height: 129%;
     color: #C24624;
-    margin-bottom: 32px;
+    margin-bottom: 2.9vh;
 }
 
 .login-form h3 span:first-child {
@@ -41,7 +100,7 @@
 }
 
 .welcome-section {
-    margin-bottom: 26px;
+    margin-bottom: 2.4vh;
 }
 
 .welcome-section p:first-child {
@@ -50,7 +109,13 @@
     font-size: 2.2rem;
     line-height: 136%;
     color: #4B465C;
-    margin-bottom: 6px;
+    margin-bottom: 0.555vh ;
+}
+
+@media (max-width: 360px) {
+    .welcome-section p:first-child {
+        font-size: 1.5rem;
+    }
 }
 
 .welcome-section p:nth-child(2) {
@@ -61,8 +126,19 @@
     color: #4B465C;
 }
 
+@media (max-width: 511px) {
+    .welcome-section p:nth-child(2) {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 397px) {
+    .welcome-section p:nth-child(2) {
+        font-size: 0.9rem;
+    }
+}
+
 .login-form label {
-    background-color: red;
     cursor: pointer;
 }
 
@@ -71,19 +147,21 @@
     font-weight: 400;
     font-size: 1.3rem;
     line-height: 118%;
-    margin-bottom: 4px;
+    margin-bottom: 0.37vh;
 }
 
 .login-form label input {
-    height: 38px;
+    height: 3.5vh;
     width: 100%;
     padding-left: 14px;
-    margin-bottom: 16px;
+    margin-bottom: 1.48vh;
+    outline: 1px solid #DBDADE;
+    border-radius: 6px;
 }
 
 .login-form button {
     width: 100%;
-    height: 38px;
+    height: 3.51vh;
     background-color: #FF9F43;
     font-family: "Inter", "Arial", sans-serif;
     font-weight: 500;
@@ -91,18 +169,29 @@
     line-height: 118%;
     color: white;
     letter-spacing: 0.43px;
-    margin-bottom: 26px;
+    margin-bottom: 2.4vh;
     cursor: pointer;
+    border-radius: 6px;
 }
 
 .no-account {
     margin: 0 auto;
-    width: max-content;
+    width: 100%;
     font-family: Inter;
     color: #4B465C;
     font-size: 1.5rem;
     line-height: 147%;
     font-weight: 400;
+    display: flex;
+    justify-content: center;
+    column-gap: 1%;
+}
+
+@media (max-width: 415px) {
+    .no-account {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .get-register {
@@ -114,6 +203,10 @@
     text-decoration: underline;
 }
 
+.password-section {
+    position: relative;
+}
+
 .password-forgotten {
     position: absolute;
     font-family: Inter;
@@ -121,8 +214,8 @@
     font-size: 1.3rem;
     line-height: 118%;
     color: #FF9F43;
-    right: 7.1%;
-    top: 258px;
+    right: 0;
+    top: -1px
 }
 
 .password-forgotten:hover {
@@ -132,5 +225,12 @@
 .bottom-shape {
     position: absolute;
     right: 0;
-    top: 573px;
+    top: 53vh;
+    aspect-ratio: 1;
+}
+
+@media (max-width: 1024px) {
+    .bottom-shape {
+        width: 21%;
+    }
 }
