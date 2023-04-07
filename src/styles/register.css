@@ -1,8 +1,44 @@
 .register-section {
-    width: 38%; /*552px*/
+    width: 45%; /*552px*/
     margin: 12vh auto;
     position: relative;
     padding-top: 5.3vh;
+}
+
+@media (max-width: 1215px) {
+    .register-section {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1094px) {
+    .register-section {
+        width: 55%;
+    }
+}
+
+@media (max-width: 994px) {
+    .register-section {
+        width: 65%;
+    }
+}
+
+@media (max-width: 842px) {
+    .register-section {
+        width: 75%;
+    }
+}
+
+@media (max-width: 729px) {
+    .register-section {
+        width: 90%;
+    }
+}
+
+@media (max-width: 607px) {
+    .register-section {
+        width: 95%;
+    }
 }
 
 .register__top-shape {
@@ -23,6 +59,19 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+@media (max-width: 575px) {
+    .register-form {
+        width: 90%
+    }
+}
+
+@media (max-width: 517px) {
+    .register-form {
+        width: 95%
+    }
+}
+
 
 .register-form h3 {
     font-family: "Inter";
@@ -57,6 +106,18 @@
     font-size: 1.5rem;
     line-height: 147%;
     color: #4B465C;
+}
+
+@media (max-width: 486px) {
+    .register-welcome-section p:nth-child(2) {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 325px) {
+    .register-welcome-section p:nth-child(2) {
+        font-size: 1rem;
+    }
 }
 
 .register-form label {
@@ -97,6 +158,13 @@
     font-weight: 400;
     height: 2vh;
     margin-bottom: 1.5vh;
+    justify-content: center;
+}
+
+@media (max-width: 451px) {
+    .register__i-agree-section {
+        font-size: 1rem;
+    }
 }
 
 .register__i-agree-section > label {
@@ -124,6 +192,12 @@
     margin-bottom: 1.5vh;
     cursor: pointer;
     border-radius: 6px;
+}
+
+@media (max-height: 434px) {
+    .register-form button {
+        height: 10vh;
+    }  
 }
 
 .register-has-account {
