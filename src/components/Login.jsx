@@ -24,7 +24,7 @@ function Login() {
                         <p>Пароль</p>
                         <input type="password" className="password"/>
                     </label>
-                 <Link className="password-forgotten">Забыли пароль?</Link>
+                 <Link to="/reset-password" className="password-forgotten">Забыли пароль?</Link>
                  </div>
                  <button>Войти</button>
                  <div className="no-account"><p>Нет аккаунта?</p> <Link className="get-register" to="/register">Зарегестрироваться</Link></div>

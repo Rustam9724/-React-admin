@@ -12,7 +12,7 @@ function Register() {
                  </div>
                  <label>
                     <p>Имя <span>*</span></p>
-                    <input type="еуче" placeholder="Placeholder"/>
+                    <input type="text" placeholder="Placeholder"/>
                  </label>
                 <label>
                     <p>Фамилия</p>
