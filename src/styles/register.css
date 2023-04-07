@@ -1,0 +1,154 @@
+.register-section {
+    width: 38%; /*552px*/
+    margin: 12vh auto;
+    position: relative;
+    padding-top: 5.3vh;
+}
+
+.register__top-shape {
+    background: url("../assets/register-top-shape.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 43%;
+    aspect-ratio: 1;
+}
+
+.register-form {
+    position: relative;
+    width: 82%; /*450px*/;
+    padding: 2.9vh 5.7%;
+    background-color: white;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register-form h3 {
+    font-family: "Inter";
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.8rem;
+    line-height: 129%;
+    color: #C24624;
+    margin-bottom: 2.2vh;
+}
+
+.register-form h3 span:first-child {
+    color: #FF9F43;
+}
+
+.register-welcome-section {
+    margin-bottom: 2.4vh;
+}
+
+.register-welcome-section p:first-child {
+    font-family: "Inter", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 136%;
+    color: #4B465C;
+    margin-bottom: 0.555vh ;
+}
+
+.register-welcome-section p:nth-child(2) {
+    font-family: "Inter", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 147%;
+    color: #4B465C;
+}
+
+.register-form label {
+    cursor: pointer;
+    margin-bottom: 1.48vh;
+    display: block;
+}
+
+.register-form label p {
+    font-family: "Inter", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 118%;
+    margin-bottom: 0.37vh;
+}
+
+.register-form label p span {
+    color: red;
+}
+
+.register-form label input {
+    height: 3.5vh;
+    width: 100%;
+    padding-left: 14px;
+    outline: 1px solid #DBDADE;
+    border-radius: 6px;
+}
+
+.register__i-agree-section {
+    display: flex;
+    align-items: center;
+    column-gap: 1.3%;
+    width: 100%;
+    font-family: Inter;
+    color: #4B465C;
+    font-size: 1.5rem;
+    line-height: 147%;
+    font-weight: 400;
+    height: 2vh;
+    margin-bottom: 1.5vh;
+}
+
+.register__i-agree-section > label {
+    margin-top: 1.5vh;
+}
+
+.register__i-agree-section a {
+    color: #FF9F43;
+}
+
+.register__i-agree-section:hover {
+    text-decoration: underline;
+}
+
+.register-form button {
+    width: 100%;
+    height: 3.51vh;
+    background-color: #FF9F43;
+    font-family: "Inter", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 118%;
+    color: white;
+    letter-spacing: 0.43px;
+    margin-bottom: 1.5vh;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.register-has-account {
+    margin: 0 auto;
+    width: 100%;
+    font-family: Inter;
+    color: #4B465C;
+    font-size: 1.5rem;
+    line-height: 147%;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    column-gap: 1%;
+}
+
+.register__sign-in {
+    color: #FF9F43;
+    text-decoration: none;
+}
+
+.register__bottom-shape {
+    position: absolute;
+    top: 57vh;
+    right: 0;
+    width: 40%;
+    aspect-ratio: 1;
+    background: url("../assets/register__bottom-shape.png");
+}
