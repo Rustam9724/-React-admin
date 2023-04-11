@@ -1,0 +1,322 @@
+.main__container {
+    display: flex;
+    column-gap: 1.8%;
+}
+
+.aside {
+    width: 260px;
+    padding-top: 20px;
+    background-color: white;
+    height: 1024px;
+}
+
+.aside h3 {
+    font-family: "Inter";
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.2rem;
+    line-height: 109%;
+    color: #C24624;
+    margin-bottom: 2.9vh;
+}
+
+.aside h3 span:first-child {
+    color: #FF9F43;
+}
+
+.aside__item {
+    width: 232px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    cursor: pointer;
+}
+
+.aside__item.opened {
+    background-color: rgba(75, 70, 92, 0.04);
+}
+
+.aside__item.opened .aside__item__arrow {
+    transform: rotateZ(90deg);
+}
+
+.aside__item:hover {
+    background: rgba(75, 70, 92, 0.04);
+}
+
+.aside__item div {
+    width: 22px;
+    height: 22px;
+}
+
+.aside__item p {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 147%;
+    color: #4B465C;
+    flex-grow: 1;
+}
+
+.aside__item__arrow {
+    width: 18px;
+    height: 18px;
+    background-image: url('../assets/chevron-right.png');
+}
+
+.aside__item-summary div {
+    background-image: url("../assets/chart-pie.png");
+}
+
+.aside__item-menu div:first-child {
+    background-image: url("../assets/tools-kitchen-2.png");
+}
+
+.aside__item-tables div:first-child {
+    background-image: url("../assets/container.png");
+}
+
+.aside__item-order-list div:first-child {
+    background-image: url("../assets/list.png");
+}
+
+.aside__item-employers div:first-child {
+    background-image: url("../assets/users.png");
+}
+
+.aside__item-marketing div:first-child {
+    background-image: url("../assets/chart-dots.png");
+}
+
+.aside__item-statistics div:first-child {
+    background-image: url("../assets/chart-bar.png");
+}
+
+.aside__item-settings div:first-child {
+    background-image: url("../assets//settings.png");
+}
+
+.aside__item-subscribe div:first-child {
+    background-image: url("../assets/currency-rubel.png");
+}
+
+.aside__item-support div:first-child {
+    background-image: url("../assets/help.png");
+}
+
+.aside__item-drop-down div {
+    background-image: url("../assets/point.png");
+}
+
+
+.summary {
+    width: 78%; /*1128px*/
+    padding-top: 1.8vh;
+}
+
+.summary__header {
+    display: flex;
+    padding: 1.25vh 1.66%;
+    height: 62px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(165, 163, 174, 0.3);
+    border-radius: 6px;
+    align-items: center;
+    column-gap: 1.4%;
+    justify-content: space-between;
+    margin-bottom: 2.96vh;
+}
+
+.summary__header select {
+    width: 22%;
+    height: 35px;
+    border: 1px solid #DBDADE;
+    border-radius: 4px;
+    padding: 0.64vh 0.88%;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 162%;
+    color: #4B465C;
+    margin-right: 35%;
+}
+
+.summary__header__price {
+    width: 13%; /*150 px*/
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5.33%;
+    border: 1px solid #DBDADE;
+    border-radius: 6px;
+}
+
+.summary__header__price__wallet {
+    width: 18px;
+    height: 18px;
+    background-image: url("../assets/wallet.png");
+}
+
+.summary__header__price p {
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 147%;
+    color: #A8AAAE;
+    letter-spacing: 0.43px;
+}
+
+.summary__header__theme-tumbler {
+    width: 26px;
+    height: 26px;
+    background-image: url("../assets/moon-stars.png");
+}
+
+.summary__header__notifications {
+    width: 32px;
+    height: 37px;
+    background-image: url("../assets/Notification.png");
+}
+
+.summary__header__employer {
+    width: 16%; /*179px*/
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 8.9%;
+}
+
+.summary__header__employer__left {
+    flex-grow: 1;
+}
+
+.summary__header__employer__left p:first-child {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 147%;
+    color: #4B465C;
+    opacity: 0.8;
+}
+
+.summary__header__employer__left p {
+    font-family: "Inter";
+    font-size: 1.3rem;
+    line-height: 154%;
+    color: #4B465C;
+    opacity: 0.5;
+}
+
+.summary__header__employer__right {
+    width: 39px;
+    height: 39px;
+    background-image: url("../assets/Avatar.png");
+}
+
+.summary h2 {
+    width: 29%;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 136%;
+    color: #4B465C;
+    opacity: 0.9;
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.summary h2::after {
+    content: url("../assets/info-circle.png");
+    position: absolute;
+    right: -1vw;
+    top: 0.5vh;
+}
+
+.summary_main {
+    display: flex;
+    height: 314px;
+    column-gap: 5.67%;
+    margin-bottom: 486px;
+}
+
+.summary__main__left{
+    width: 28%; /*410px*/
+    height: 314px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 16px;
+}
+
+.summary__main__left__item  {
+    background-color: white;
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 18px rgba(75, 70, 92, 0.1);
+    border-radius: 6px;
+    padding: 0 5.85%;
+}
+
+.summary__main__left__item__text p:first-child {
+    font-family: "inter";
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 133%;
+    color: #4B465C;
+    opacity: 0.9;
+}
+
+.summary__main__left__item__text p:nth-child(2) {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 154%;
+    color: #4B465C;
+    opacity: 0.8;
+    flex-grow: 1;
+}
+
+.summary__main__left__item__icon {
+    width: 42px;
+    height: 42px;
+}
+
+.summary__main__left__item:first-child .summary__main__left__item__icon {
+    background-image: url("../assets/Icon.png");
+}
+
+.summary__main__left__item:nth-child(2) .summary__main__left__item__icon {
+    background-image: url("../assets/Icon_2.png");
+}
+
+.summary__main__left__item:nth-child(3) .summary__main__left__item__icon {
+    background-image: url("../assets/Icon_3.png");
+}
+
+.summary__main__right {
+    width: 28%;
+    aspect-ratio: 1;
+    background-image: url("../assets/diagram.png");
+}
+
+.summary footer {
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 147%;
+    color: #4B465C;
+    opacity: 0.5;
+    column-gap: 1.4%;
+}
+
+.summary footer p:first-child {
+    flex-grow: 1;
+}
