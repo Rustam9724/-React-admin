@@ -1,0 +1,455 @@
+.summary {
+    width: 78%; /*1128px*/
+    padding-top: 1.8vh;
+    padding-right: 1.8%;
+}
+
+@media (max-width: 1024px) {
+    .summary {
+        width: 95%; /*972px*/
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 337px) {
+    .summary {
+        padding-right: 0%;
+    }
+}
+
+.summary__header {
+    display: flex;
+    padding: 1.25vh 1.66%;
+    height: 62px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(165, 163, 174, 0.3);
+    border-radius: 6px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.96vh;
+}
+
+@media (max-width: 650px) {
+    .summary__header {
+        flex-direction: column;
+        height: 124px;
+        align-items: flex-start;
+    }
+}
+
+.summary__header__left {
+    width: 22%; /*290px*/
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+    .summary__header__left {
+        width: 30%; /*250*/
+    }
+}
+
+@media (max-width: 1024px) {
+    .summary__header__left {
+        width: 30%;
+    }
+}
+
+@media (max-width: 650px) {
+    .summary__header__left {
+        width: 45%;
+    }
+}
+
+@media (max-width: 499px) {
+    .summary__header__left {
+        width: 60%;
+    }
+}
+
+.summary__burger-btn {
+    display: block;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 5px;
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .summary__burger-btn {
+        display: flex;
+    }
+}
+
+.summary__burger-btn div {
+    width: 16px;
+    height: 2px;
+    background-color: #4B465C;
+    opacity: 0.8;
+}
+
+.summary__header select {
+    width: 100%; /*250px*/
+    height: 35px;
+    border: 1px solid #DBDADE;
+    border-radius: 4px;
+    padding: 0.64vh 0.88%;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 162%;
+    color: #4B465C;
+    /* z-index: 2; */
+}
+
+@media (max-width: 1024px) {
+    .summary__header select {
+        width: 86%;
+    }
+}
+
+.summary__header__right {
+    width: 39%; /*435px*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1325px) {
+    .summary__header__right {
+        width: 44%;
+    }
+} 
+
+@media (max-width: 1194px) {
+    .summary__header__right {
+        width: 49%;
+    }
+} 
+
+@media (max-width: 1094px) {
+    .summary__header__right {
+        width: 59%;
+    }
+}  
+
+@media (max-width: 1024px) {
+    .summary__header__right {
+        width: 45%; /*435px*/
+    }
+}
+
+@media (max-width: 939px) {
+    .summary__header__right {
+        width: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    .summary__header__right {
+        width: 65%;
+    }
+}
+
+@media (max-width: 650px) {
+    .summary__header__right {
+        width: 80%;
+    }
+}
+
+@media (max-width: 528px) {
+    .summary__header__right {
+        width: 95%;
+    }
+}
+
+.summary__header__price {
+    width: 34%; /*150 px*/
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #DBDADE;
+    border-radius: 6px;
+}
+
+@media (max-width: 367px) {
+    .summary__header__price {
+        column-gap: 3%;
+    }
+}
+
+.summary__header__price__wallet {
+    width: 18px;
+    height: 18px;
+    background-image: url("../assets/wallet.png");
+}
+
+.summary__header__price p {
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 147%;
+    color: #A8AAAE;
+    letter-spacing: 0.43px;
+}
+
+@media (max-width: 367px) {
+    .summary__header__price p {
+        font-size: 1rem;
+    }
+}
+
+.summary__header__theme-tumbler {
+    width: 26px;
+    height: 26px;
+    background-image: url("../assets/moon-stars.png");
+}
+
+.summary__header__notifications {
+    width: 32px;
+    height: 37px;
+    background-image: url("../assets/Notification.png");
+}
+
+.summary__header__employer {
+    width: 41%; /*179px*/
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 8.9%;
+}
+
+.summary__header__employer__left p:first-child {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 147%;
+    color: #4B465C;
+    opacity: 0.8;
+}
+
+@media (max-width: 444px) {
+    .summary__header__employer__left p:first-child {
+        font-size: 1rem;
+    }
+}
+
+.summary__header__employer__left p {
+    font-family: "Inter";
+    font-size: 1.3rem;
+    line-height: 154%;
+    color: #4B465C;
+    opacity: 0.5;
+}
+
+@media (max-width: 444px) {
+    .summary__header__employer__left p {
+        font-size: 0.9rem;
+    }
+}
+
+.summary__header__employer__right {
+    width: 39px;
+    height: 39px;
+    background-image: url("../assets/Avatar.png");
+    background-size: cover;
+}
+
+@media (max-width: 330px) {
+    .summary__header__employer__right {
+        width: 29px;
+        height: 29px;
+    }
+}
+
+.summary h2 {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 136%;
+    color: #4B465C;
+    opacity: 0.9;
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.summary_main {
+    display: flex;
+    height: 314px;
+    column-gap: 5.67%;
+    margin-bottom: 486px;
+}
+
+@media (max-width: 1024px) {
+    .summary_main {
+        column-gap: 4.32%;
+    }
+}
+
+@media (max-width: 496px) {
+    .summary_main {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        height: 560px;
+    }
+}
+
+@media (width: 1024px) and (height: 1366px) {
+    .summary_main {
+        margin-bottom: 825px;
+    }
+}
+
+@media (width: 912px) and (height: 1368px) {
+    .summary_main {
+        margin-bottom: 825px;
+    }
+}
+
+@media (width: 820px) and (height: 1180px) {
+    .summary_main {
+        margin-bottom: 825px;
+    }
+}
+
+@media (width: 800px) and (height: 1280px) {
+    .summary_main {
+        margin-bottom: 825px;
+    }
+}
+
+@media (width: 712px) and (height: 1138px) {
+    .summary_main {
+        margin-bottom: 825px;
+    }
+}
+
+.summary__main__left {
+    width: 28%; /*410px*/
+    height: 314px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 16px;
+}
+
+@media (max-width: 1024px) {
+    .summary__main__left {
+        width: 38%; /*370px*/;
+        height: 272px;
+    }
+}
+
+@media (max-width: 496px) {
+    .summary__main__left {
+        width: 58%;
+        height: 272px;
+    }
+}
+
+.summary__main__left__item  {
+    background-color: white;
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 18px rgba(75, 70, 92, 0.1);
+    border-radius: 6px;
+    padding: 0 5.85%;
+}
+
+@media (max-width: 1024px) {
+    .summary__main__left__item  {
+        height: 80px;
+    }
+}
+
+.summary__main__left__item__text p:first-child {
+    font-family: "inter";
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 133%;
+    color: #4B465C;
+    opacity: 0.9;
+}
+
+.summary__main__left__item__text p:nth-child(2) {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 154%;
+    color: #4B465C;
+    opacity: 0.8;
+    flex-grow: 1;
+}
+
+.summary__main__left__item__icon {
+    width: 42px;
+    height: 42px;
+}
+
+.summary__main__left__item:first-child .summary__main__left__item__icon {
+    background-image: url("../assets/Icon.png");
+}
+
+.summary__main__left__item:nth-child(2) .summary__main__left__item__icon {
+    background-image: url("../assets/Icon_2.png");
+}
+
+.summary__main__left__item:nth-child(3) .summary__main__left__item__icon {
+    background-image: url("../assets/Icon_3.png");
+}
+
+.summary__main__right {
+    width: 314px;
+    background-image: url("../assets/diagram.png");
+    background-size: cover;
+}
+
+@media (max-width: 1024px) {
+    .summary__main__right {
+        width: 272px;
+        height: 272px;
+    }
+}
+
+.summary footer {
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 147%;
+    color: #4B465C;
+    opacity: 0.5;
+    column-gap: 1.4%;
+}
+
+@media (max-width: 652px) {
+    .summary footer {
+        flex-direction: column;
+        height: 70px;
+        align-items: center;
+    }
+}
+
+.summary footer p:first-child {
+    flex-grow: 1;
+}
+
+.substrate {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+}
