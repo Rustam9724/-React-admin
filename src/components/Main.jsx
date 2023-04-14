@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Summary from './Summary.jsx'
 
 function Main() {
@@ -9,6 +8,16 @@ function Main() {
     const [isStatisticsItemOpen, setIsStatisticsItemOpen] = useState(false);
     const [isSettingsItemOpen, setIsSettingsItemOpen] = useState(false);
     const [isSubscribeItemOpen, setIsSubscribeItemOpen] = useState(false);
+    
+    function asideOpen() {
+        const aside = document.querySelector('.aside');
+        const substrate = document.querySelector('.substrate');
+        aside.style.display = 'block';
+        substrate.style.display = 'block';
+        aside.style.position = 'absolute';
+        aside.style.zIndex = '2';
+        console.log('Hi')
+    }
 
     function menuItemToggle(event) {
         setIsMenuItemOpen(!isMenuItemOpen);
@@ -46,8 +55,16 @@ function Main() {
         target.classList.toggle("opened");
     }
 
+    function asideClose() {
+        const aside = document.querySelector('.aside');
+        const substrate = document.querySelector('.substrate');
+        aside.style.display = 'none'; 
+        substrate.style.display = 'none'; 
+    }
+
     return (
         <div className="main__container">
+            <div className="substrate" onClick={asideClose}></div>
             <div className="aside">
                 <h3><span>Вкус</span><span>Клик</span></h3>
                 <div className="aside__item aside__item-summary">
@@ -175,7 +192,38 @@ function Main() {
                     <p>Поддержка</p>
                 </div>
             </div>
-            <Summary />
+            <div className="main__right">
+                <div className="main__header">
+                    <div className="main__header__left">
+                        <div className="main__burger-btn" onClick={asideOpen}>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <select>
+                            <option>Ресторан</option>
+                            <option>Ресторан 2</option>
+                            <option>Ресторан 3</option>
+                        </select>
+                    </div>
+                    <div className="main__header__right">
+                        <div className="main__header__price">
+                            <div className="main__header__price__wallet"></div>
+                                <p>23434 руб.</p>
+                            </div>
+                        <div className="main__header__theme-tumbler"></div>
+                        <div className="main__header__notifications"></div>
+                        <div className="main__header__employer">
+                            <div className="main__header__employer__left">
+                                <p>Имя Фамилия</p>
+                                <p>Должность</p>
+                            </div>
+                            <div className="main__header__employer__right"></div>
+                        </div>
+                    </div>
+                </div>
+                <Summary />
+            </div>
         </div>
     ) 
 }

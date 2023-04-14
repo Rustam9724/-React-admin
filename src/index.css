@@ -2,7 +2,7 @@
 @import './assets/fonts/Inter Web/inter.css';
 @import './styles/register.css';
 @import './styles/reset-password.css';
-@import './styles/aside.css';
+@import './styles/main.css';
 @import './styles/summary.css';
 
 *, ul, p, h1, h2, h3, h4, button, body, input, ::before, ::after, div {

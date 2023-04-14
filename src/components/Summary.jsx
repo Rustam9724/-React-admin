@@ -1,54 +1,6 @@
 function Summary() {
-    
-    function asideOpen() {
-        const aside = document.querySelector('.aside');
-        const substrate = document.querySelector('.substrate');
-        aside.style.display = 'block';
-        substrate.style.display = 'block';
-        aside.style.position = 'absolute';
-        aside.style.zIndex = '2';
-        console.log('Hi')
-    }
-    
-    function asideClose() {
-        const aside = document.querySelector('.aside');
-        const substrate = document.querySelector('.substrate');
-        aside.style.display = 'none'; 
-        substrate.style.display = 'none'; 
-    }
-
     return (
         <div className="summary">
-            <div className="substrate" onClick={asideClose}></div>
-                <div className="summary__header">
-                    <div className="summary__header__left">
-                        <div className="summary__burger-btn" onClick={asideOpen}>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <select>
-                            <option>Ресторан</option>
-                            <option>Ресторан 2</option>
-                            <option>Ресторан 3</option>
-                        </select>
-                    </div>
-                    <div className="summary__header__right">
-                        <div className="summary__header__price">
-                            <div className="summary__header__price__wallet"></div>
-                            <p>23434 руб.</p>
-                        </div>
-                        <div className="summary__header__theme-tumbler"></div>
-                        <div className="summary__header__notifications"></div>
-                        <div className="summary__header__employer">
-                            <div className="summary__header__employer__left">
-                                <p>Имя Фамилия</p>
-                                <p>Должность</p>
-                            </div>
-                            <div className="summary__header__employer__right"></div>
-                        </div>
-                    </div>
-                </div>
                 <h2>Сводка за текущий день</h2>
                 <div className="summary_main">
                     <div className="summary__main__left">
