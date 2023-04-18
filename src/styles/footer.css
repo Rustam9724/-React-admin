@@ -1,0 +1,24 @@
+footer {
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 147%;
+    color: #4B465C;
+    opacity: 0.5;
+    column-gap: 1.4%;
+}
+
+@media (max-width: 652px) {
+    footer {
+        flex-direction: column;
+        height: 70px;
+        align-items: center;
+    }
+}
+
+footer p:first-child {
+    flex-grow: 1;
+}

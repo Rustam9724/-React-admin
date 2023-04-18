@@ -1,5 +1,36 @@
 import { useState } from 'react';
-import Summary from './Summary.jsx'
+import Summary from './Summary.jsx';
+import Categories from './Categories';
+import AddCategory from './AddCategory.jsx';
+import { nanoid } from 'nanoid';
+import Footer from './Footer';
+
+const categoriesList = [
+    {
+        id: nanoid(),
+        name: 'Первая категория',
+        status: true,
+        lastChange: '20.01.2023, 00:00',
+        order: 1,
+        isEdit: false,
+    },
+    {
+        id: nanoid(),
+        name: 'Вторая категория',
+        status: false,
+        lastChange: '20.01.2023, 00:00',
+        order: 2,
+        isEdit: false,
+    },
+    {
+        id: nanoid(),
+        name: 'Третья категория',
+        status: true,
+        lastChange: '20.01.2023, 00:00',
+        order: 3,
+        isEdit: false,
+    },
+]
 
 function Main() {
     const [isMenuItemOpen, setIsMenuItemOpen] = useState(false);
@@ -8,6 +39,18 @@ function Main() {
     const [isStatisticsItemOpen, setIsStatisticsItemOpen] = useState(false);
     const [isSettingsItemOpen, setIsSettingsItemOpen] = useState(false);
     const [isSubscribeItemOpen, setIsSubscribeItemOpen] = useState(false);
+    const [openComponent, setOpenComponent] = useState('Summary');
+    const [categoriesListState, setCategoriesListState] = useState(categoriesList)
+
+    let show;
+
+    if (openComponent === 'Summary') {
+        show = <Summary />
+    } else if (openComponent === 'Categories') {
+        show = <Categories categoriesListState={categoriesListState} setCategoriesListState={setCategoriesListState} setOpenComponent={setOpenComponent}/>
+    } else if (openComponent === 'AddCategory') {
+        show = <AddCategory categoriesListState={categoriesListState} setCategoriesListState={setCategoriesListState} setOpenComponent={setOpenComponent}/>
+    }
     
     function asideOpen() {
         const aside = document.querySelector('.aside');
@@ -81,7 +124,7 @@ function Main() {
                         <>
                             <div className="aside__item aside__item-drop-down">
                                 <div></div>
-                                <p>Категории</p>
+                                <p onClick={() => setOpenComponent('Categories')}>Категории</p>
                             </div>
                             <div className="aside__item aside__item-drop-down">
                                 <div></div>
@@ -222,7 +265,8 @@ function Main() {
                         </div>
                     </div>
                 </div>
-                <Summary />
+                {show}
+                <Footer />
             </div>
         </div>
     ) 

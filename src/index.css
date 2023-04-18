@@ -4,6 +4,9 @@
 @import './styles/reset-password.css';
 @import './styles/main.css';
 @import './styles/summary.css';
+@import './styles/categories.css';
+@import './styles/addCategory.css';
+@import './styles/footer.css';
 
 *, ul, p, h1, h2, h3, h4, button, body, input, ::before, ::after, div {
   padding: 0;

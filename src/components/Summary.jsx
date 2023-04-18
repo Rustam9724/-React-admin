@@ -28,11 +28,6 @@ function Summary() {
                     </div>
                     <div className="summary__main__right"></div>
                 </div>
-                <footer>
-                        <p>© 2023 ВкусКлик</p>
-                        <p>Пользовательское соглашение</p>
-                        <p>Политика конфиденциальности</p>
-                </footer>
             </div>
     )
 }
