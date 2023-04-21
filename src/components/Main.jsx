@@ -2,35 +2,13 @@ import { useState } from 'react';
 import Summary from './Summary.jsx';
 import Categories from './Categories';
 import AddCategory from './AddCategory.jsx';
-import { nanoid } from 'nanoid';
+import {} from 'nanoid';
 import Footer from './Footer';
+import { categoriesList, meelsAndDrinksList } from './object';
+import MeelsAndDrinks from './MeelsAndDrinks.jsx';
+import AddMeel from './AddMeel.jsx';
 
-const categoriesList = [
-    {
-        id: nanoid(),
-        name: 'Первая категория',
-        status: true,
-        lastChange: '20.01.2023, 00:00',
-        order: 1,
-        isEdit: false,
-    },
-    {
-        id: nanoid(),
-        name: 'Вторая категория',
-        status: false,
-        lastChange: '20.01.2023, 00:00',
-        order: 2,
-        isEdit: false,
-    },
-    {
-        id: nanoid(),
-        name: 'Третья категория',
-        status: true,
-        lastChange: '20.01.2023, 00:00',
-        order: 3,
-        isEdit: false,
-    },
-]
+
 
 function Main() {
     const [isMenuItemOpen, setIsMenuItemOpen] = useState(false);
@@ -41,6 +19,7 @@ function Main() {
     const [isSubscribeItemOpen, setIsSubscribeItemOpen] = useState(false);
     const [openComponent, setOpenComponent] = useState('Summary');
     const [categoriesListState, setCategoriesListState] = useState(categoriesList)
+    const [meelsAndDrinksListState, setMeelsAndDrinksListState] = useState(meelsAndDrinksList)
 
     let show;
 
@@ -50,6 +29,10 @@ function Main() {
         show = <Categories categoriesListState={categoriesListState} setCategoriesListState={setCategoriesListState} setOpenComponent={setOpenComponent}/>
     } else if (openComponent === 'AddCategory') {
         show = <AddCategory categoriesListState={categoriesListState} setCategoriesListState={setCategoriesListState} setOpenComponent={setOpenComponent}/>
+    } else if (openComponent === 'MeelsAndDrinks') {
+        show = <MeelsAndDrinks meelsAndDrinksListState={meelsAndDrinksListState} setMeelsAndDrinksListState={setMeelsAndDrinksListState} setOpenComponent={setOpenComponent}/>
+    } else if (openComponent === 'AddMeel') {
+        show = <AddMeel />
     }
     
     function asideOpen() {
@@ -128,7 +111,7 @@ function Main() {
                             </div>
                             <div className="aside__item aside__item-drop-down">
                                 <div></div>
-                                <p>Блюда и напитки</p>
+                                <p onClick={() => setOpenComponent('MeelsAndDrinks')}>Блюда и напитки</p>
                             </div>
                         </>
                 }
