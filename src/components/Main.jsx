@@ -32,7 +32,7 @@ function Main() {
     } else if (openComponent === 'MeelsAndDrinks') {
         show = <MeelsAndDrinks meelsAndDrinksListState={meelsAndDrinksListState} setMeelsAndDrinksListState={setMeelsAndDrinksListState} setOpenComponent={setOpenComponent}/>
     } else if (openComponent === 'AddMeel') {
-        show = <AddMeel />
+        show = <AddMeel meelsAndDrinksListState={meelsAndDrinksListState} setMeelsAndDrinksListState={setMeelsAndDrinksListState} setOpenComponent={setOpenComponent}/>
     }
     
     function asideOpen() {

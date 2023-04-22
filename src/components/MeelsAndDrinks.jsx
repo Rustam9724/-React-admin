@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 function MeelsAndDrinks({meelsAndDrinksListState, setMeelsAndDrinksListState, setOpenComponent}) {
     const [searchValue, setSearchValue] = useState(''); 
 
-    function editMeelAndDrinkElemen(event, elem) {
+    function editMeelAndDrinkName(event, elem) {
         const date = new Date();
 
         let day = date.getDate();
@@ -25,20 +25,52 @@ function MeelsAndDrinks({meelsAndDrinksListState, setMeelsAndDrinksListState, se
         }))
     }
 
-    function editClickHandler(elem) {
+    function editMeelAndDrinkPrice(event, elem) {
+        const date = new Date();
+
+        let day = date.getDate();
+        if (`${day}`.length === 1) {
+            day = `0${day}`
+        }
+
+        let month = date.getMonth() + 1;
+        if (`${month}`.length === 1) {
+            month = `0${month}`
+        } 
+
         setMeelsAndDrinksListState(meelsAndDrinksListState.map(ctg => {
             if (ctg.id === elem.id) {
-                return {...ctg, isEdit: true};
+                return {...ctg, price: event.target.value, lastChange: `${day}.${month}.${date.getFullYear()}, ${date.getHours()}:${date.getMinutes()}`};
             } else {
                 return ctg;
             }
         }))
     }
 
-    function editBlurHandler(elem) {
+    function editNameHandler(elem) {
         setMeelsAndDrinksListState(meelsAndDrinksListState.map(ctg => {
             if (ctg.id === elem.id) {
-                return {...ctg, isEdit: false};
+                return {...ctg, isNameEdit: true};
+            } else {
+                return ctg;
+            }
+        }))
+    }
+
+    function editNameBlurHandler(elem) {
+        setMeelsAndDrinksListState(meelsAndDrinksListState.map(ctg => {
+            if (ctg.id === elem.id) {
+                return {...ctg, isNameEdit: false, isPriceEdit: true};
+            } else {
+                return ctg;
+            }
+        }))
+    }
+
+    function editPriceBlurHandler(elem) {
+        setMeelsAndDrinksListState(meelsAndDrinksListState.map(ctg => {
+            if (ctg.id === elem.id) {
+                return {...ctg, isPriceEdit: false};
             } else {
                 return ctg;
             }
@@ -47,7 +79,11 @@ function MeelsAndDrinks({meelsAndDrinksListState, setMeelsAndDrinksListState, se
 
     function editEnterHandler(event, elem) {
         if (event.key === 'Enter') {
-            editBlurHandler(elem);
+            if (elem.isNameEdit) {
+                editNameBlurHandler(elem);
+            } else if (elem.isPriceEdit) {
+                editPriceBlurHandler(elem);
+            }
         }
     }
 
@@ -78,12 +114,12 @@ function MeelsAndDrinks({meelsAndDrinksListState, setMeelsAndDrinksListState, se
                 <div className="meels-and-drinks__main__list__section__name">
                     <div ></div>
                     {
-                        !elem.isEdit ? <p>{elem.name}</p> 
+                        !elem.isNameEdit ? <p>{elem.name}</p> 
                         : <input 
                             type="text" 
                             value={elem.name} 
-                            onChange={event => editMeelAndDrinkElemen(event, elem, elem.id)} 
-                            onBlur={() => editBlurHandler(elem)} 
+                            onChange={event => editMeelAndDrinkName(event, elem)} 
+                            onBlur={() => editNameBlurHandler(elem)} 
                             autoFocus 
                             maxLength="20"
                             onKeyDown={event => editEnterHandler(event, elem)}
@@ -91,14 +127,24 @@ function MeelsAndDrinks({meelsAndDrinksListState, setMeelsAndDrinksListState, se
                     }
                 </div>
                 <div className="meels-and-drinks__main__list__section__price">
-                    {elem.price}
+                    {
+                        !elem.isPriceEdit ? <>{elem.price}</> 
+                        : <input 
+                            type="number"
+                            value={elem.price < 0 ? 0 : elem.price}
+                            onChange={event => editMeelAndDrinkPrice(event, elem)}
+                            onBlur={() => editPriceBlurHandler(elem)}
+                            onKeyDown={event => editEnterHandler(event, elem)}
+                            autoFocus
+                        />
+                    }
                 </div>
                 <div className="meels-and-drinks__main__list__section__status">
                     <div className={elem.status ? "active" : "passive"}>{elem.status ? "Активно" : 'Неактивно'}</div>
                 </div>
                 <div className="meels-and-drinks__main__list__section__last-change">{elem.lastChange}</div>
                 <div className="meels-and-drinks__main__list__section__actions">
-                    <div onClick={() => editClickHandler(elem)}></div>
+                    <div onClick={() => editNameHandler(elem)}></div>
                     <div onClick={() => deleteCategory(elem)}></div>
                 </div>
             </div>
@@ -134,7 +180,7 @@ function MeelsAndDrinks({meelsAndDrinksListState, setMeelsAndDrinksListState, se
                         </div>
                     </div>
                     <div className="meels-and-drinks__main__header__section">
-                        <p>Цена</p>
+                        <p>Цена, руб</p>
                         <div>
                             <div className={meelsandDrinksResult.length > 10 ? 'dark' : null} onClick={scrollUpFunc} ref={mainListWrapper}></div>
                             <div></div>

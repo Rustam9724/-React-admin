@@ -248,3 +248,7 @@
     color: white;
     cursor: pointer;
 }
+
+.add-category__buttons__save-btn:hover {
+    background-color: #C24624;
+}

@@ -33,8 +33,8 @@ const meelsAndDrinksList = [
         name: 'Первое блюдо',
         status: true,
         lastChange: '20.01.2023, 00:00',
-        order: 1,
-        isEdit: false,
+        isNameEdit: false,
+        isPriceEdit: false,
         price: 550,
     },
     {
@@ -42,8 +42,8 @@ const meelsAndDrinksList = [
         name: 'Второе блюдо',
         status: true,
         lastChange: '20.01.2023, 00:00',
-        order: 1,
-        isEdit: false,
+        isNameEdit: false,
+        isPriceEdit: false,
         price: 550,
     },
     {
@@ -51,8 +51,8 @@ const meelsAndDrinksList = [
         name: 'Третье блюдо',
         status: false,
         lastChange: '20.01.2023, 00:00',
-        order: 1,
-        isEdit: false,
+        isNameEdit: false,
+        isPriceEdit: false,
         price: 550,
     },
 ]
