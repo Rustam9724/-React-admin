@@ -169,9 +169,6 @@
     resize: none;
 }
 
-.add-meel__section.add-meel__section-allergens {
-}
-
 .add-meel__section.add-meel__section-allergens label {
     width: 100%;
     min-height: 38px;
@@ -191,7 +188,6 @@
     column-gap: 1.2%;
     row-gap: 7px;
     flex-wrap: wrap;
-    /* padding-top: 7px; */
 }
 
 .add-meel__section.add-meel__section-allergens label > div div {

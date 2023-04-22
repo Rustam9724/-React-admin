@@ -147,9 +147,9 @@
     }
 }
 
-@media (max-width: 399px) {
+@media (max-width: 499px) {
     .meels-and-drinks__main__header {
-        font-size: 0.8rem;
+        font-size: 0.56rem;
     }
 }
 
@@ -160,6 +160,18 @@
     justify-content: center;
     padding: 0 1.7%;
     width: 22%;
+}
+
+@media (max-width: 549px) {
+    .meels-and-drinks__main__header__section:nth-child(1) {
+        width: 29%;
+    }
+}
+
+@media (max-width: 549px) {
+    .meels-and-drinks__main__header__section:nth-child(2) {
+        width: 15%;
+    }
 }
 
 .meels-and-drinks__main__header__section:last-child {
@@ -220,11 +232,31 @@
     column-gap: 5%;
 }
 
+@media (max-width: 549px) {
+    .meels-and-drinks__main__list__section__name {
+        width: 29%
+    }
+}
+
 .meels-and-drinks__main__list__section__name div {
     width: 38px;
     height: 38px;
     background-image: url("../assets/Rectangle\ 1.png");
     background-size: cover;
+}
+
+@media (max-width: 1149px) {
+    .meels-and-drinks__main__list__section__name div {
+        width: 29px;
+        height: 29px;
+    }
+}
+
+@media (max-width: 699px) {
+    .meels-and-drinks__main__list__section__name div {
+        width: 22px;
+        height: 22px;
+    }
 }
 
 .meels-and-drinks__main__list__section__name p {
@@ -234,6 +266,18 @@
     line-height: 147%;
     color: #4B465C;
     opacity: 0.8;
+}
+
+@media (max-width: 1149px) {
+    .meels-and-drinks__main__list__section__name p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 699px) {
+    .meels-and-drinks__main__list__section__name p {
+        font-size: 0.83rem;
+    }
 }
 
 .meels-and-drinks__main__list__section__name input {
@@ -258,6 +302,12 @@
     opacity: 0.8;
 }
 
+@media (max-width: 549px) {
+    .meels-and-drinks__main__list__section__price {
+        width: 15%
+    }
+}
+
 .meels-and-drinks__main__list__section__status {
     width: 22%;
     padding-left: 1.77%;
@@ -275,6 +325,12 @@
     font-weight: 600;
 }
 
+@media (max-width: 429px) {
+    .meels-and-drinks__main__list__section__status div {
+        font-size: 0.98rem;
+    }
+}
+
 .meels-and-drinks__main__list__section__status .active {
     line-height: 108%;
     width: 32%;
@@ -282,10 +338,59 @@
     color: #28C76F;
 }
 
+@media (max-width: 1149px) {
+    .meels-and-drinks__main__list__section__status .active {
+        width: 45%;
+    }
+}
+
+@media (max-width: 649px) {
+    .meels-and-drinks__main__list__section__status .active {
+        width: 58%;
+    }
+}
+
+@media (max-width: 499px) {
+    .meels-and-drinks__main__list__section__status .active {
+        width: 73%;
+    }
+}
+
 .meels-and-drinks__main__list__section__status .passive {
     width: 35%;
     background: rgba(60, 76, 109, 0.16);
     color: #A8AAAE;
+}
+
+
+@media (max-width: 1299px) {
+    .meels-and-drinks__main__list__section__status .passive {
+        width: 45%;
+    }
+}
+
+@media (max-width: 849px) {
+    .meels-and-drinks__main__list__section__status .passive {
+        width: 55%;
+    }
+}
+
+@media (max-width: 699px) {
+    .meels-and-drinks__main__list__section__status .passive {
+        width: 65%;
+    }
+}
+
+@media (max-width: 584px) {
+    .meels-and-drinks__main__list__section__status .passive {
+        width: 75%;
+    }
+}
+
+@media (max-width: 584px) {
+    .meels-and-drinks__main__list__section__status .passive {
+        width: 85%;
+    }
 }
 
 .meels-and-drinks__main__list__section__last-change {
@@ -301,6 +406,18 @@
     opacity: 0.8;
 }
 
+@media (max-width: 749px) {
+    .meels-and-drinks__main__list__section__last-change {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 599px) {
+    .meels-and-drinks__main__list__section__last-change {
+        font-size: 0.83rem;
+    }
+}
+
 .meels-and-drinks__main__list__section__actions {
     display: flex;
     align-items: center;
@@ -313,6 +430,14 @@
     width: 22px;
     height: 22px;
     cursor: pointer;
+    background-size: cover;
+}
+
+@media (max-width: 449px) {
+    .meels-and-drinks__main__list__section__actions div {
+        width: 17px;
+        height: 17px;
+    }
 }
 
 .meels-and-drinks__main__list__section__actions div:first-child {
