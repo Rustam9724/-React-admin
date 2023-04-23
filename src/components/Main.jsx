@@ -7,7 +7,7 @@ import Footer from './Footer';
 import { categoriesList, meelsAndDrinksList } from './object';
 import MeelsAndDrinks from './MeelsAndDrinks.jsx';
 import AddMeel from './AddMeel.jsx';
-
+import CodeGeneration from './CodeGeneration.jsx';
 
 
 function Main() {
@@ -33,6 +33,8 @@ function Main() {
         show = <MeelsAndDrinks meelsAndDrinksListState={meelsAndDrinksListState} setMeelsAndDrinksListState={setMeelsAndDrinksListState} setOpenComponent={setOpenComponent}/>
     } else if (openComponent === 'AddMeel') {
         show = <AddMeel meelsAndDrinksListState={meelsAndDrinksListState} setMeelsAndDrinksListState={setMeelsAndDrinksListState} setOpenComponent={setOpenComponent}/>
+    } else if (openComponent === 'CodeGeneration') {
+        show = <CodeGeneration />
     }
     
     function asideOpen() {
@@ -127,7 +129,7 @@ function Main() {
                                     <div></div>
                                     <p>Назначение столов</p>
                                 </div>
-                                <div className="aside__item aside__item-drop-down">
+                                <div className="aside__item aside__item-drop-down" onClick={() => setOpenComponent('CodeGeneration')}>
                                     <div></div>
                                     <p>Генераци QR-кодов</p>
                                 </div>
