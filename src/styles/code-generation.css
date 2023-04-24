@@ -21,6 +21,14 @@ select {
     justify-content: space-between;
 }
 
+@media (max-width: 799px) {
+    .code-generation__main {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+}
+
 .code-generation__main__left {
     background-color: white;
     width: 46%;
@@ -28,6 +36,30 @@ select {
     padding: 24px 2.1% 0;
     box-shadow: 0px 4px 18px rgba(75, 70, 92, 0.1);
     border-radius: 6px;
+}
+
+@media (max-width: 824px) {
+    .code-generation__main__left {
+        width: 51%;
+    }
+}
+
+@media (max-width: 799px) {
+    .code-generation__main__left {
+        width: 71%;
+    }
+}
+
+@media (max-width: 499px) {
+    .code-generation__main__left {
+        width: 91%;
+    }
+}
+
+@media (max-width: 399px) {
+    .code-generation__main__left {
+        width: 95%;
+    }
 }
 
 .code__generation__main__left__section {
@@ -89,6 +121,12 @@ select {
     cursor: pointer;
 }
 
+@media (max-width: 384px) {
+    .code__generation__main__left__section button {
+        width: 31%;
+    }
+}
+
 .code__generation__main__left__section button:hover {
     background-color: #C24624;
 }
@@ -140,6 +178,36 @@ select {
     box-shadow: 0px 4px 18px rgba(75, 70, 92, 0.1);
     border-radius: 6px;
     text-align: center;
+}
+
+@media (max-width: 1299px) {
+    .code-generation__main__right {
+        width: 41%;
+    }
+}
+
+@media (max-width: 1149px) {
+    .code-generation__main__right {
+        width: 46%;
+    }
+}
+
+@media (max-width: 799px) {
+    .code-generation__main__right {
+        width: 66%;
+    }
+}
+
+@media (max-width: 554px) {
+    .code-generation__main__right {
+        width: 81%;
+    }
+}
+
+@media (max-width: 444px) {
+    .code-generation__main__right {
+        width: 95%;
+    }
 }
 
 .code-generation__main__right__header__figures {
@@ -212,6 +280,7 @@ select {
 
 .code-generation__main__right__QR-section.circle {
     border-radius: 100%;
+    aspect-ratio: 1;
 }
 
 
@@ -249,6 +318,12 @@ select {
     margin-bottom: 4px;
 }
 
+@media (max-width: 329px) {
+    .code-generation__main__right__QR-section__view-menu.circle {
+        font-size: 1.65rem;
+    }
+}
+
 .code-generation__main__right__QR-section__description {
     font-weight: 400;
     font-size: 1.2rem;
@@ -268,6 +343,12 @@ select {
     margin-bottom: 14px;
 }
 
+@media (max-width: 349px) {
+    .code-generation__main__right__QR-section__description.circle {
+        font-size: 0.9rem;
+    }
+}
+
 .code-generation__main__right__QR-section__QR-code {
     width: 42%;
     aspect-ratio: 1;
@@ -283,6 +364,12 @@ select {
 .code-generation__main__right__QR-section__QR-code.rectangle,
 .code-generation__main__right__QR-section__QR-code.circle {
     margin-bottom: 4px;
+}
+
+@media (max-width: 374px) {
+    .code-generation__main__right__QR-section__QR-code.circle {
+        width: 32%;
+    }
 }
 
 .code-generation__main__right__QR-section a {
