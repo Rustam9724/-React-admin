@@ -2,6 +2,10 @@
     margin-bottom: 228px;
 }
 
+select {
+    cursor: pointer;
+}
+
 .code-generation h2 {
     font-family: "Inter";
     font-weight: 600;
@@ -107,7 +111,7 @@
     row-gap: 8px;
 }
 
-.code__generation__main__left__choose-table__tables__table {
+.code__generation__main__left__choose-table__tables div {
     width: 13%;
     height: 39px;
     display: flex;
@@ -121,6 +125,12 @@
     line-height: 118%;
     color: rgba(75, 70, 92, 0.4);
     cursor: pointer;
+}
+
+.code__generation__main__left__choose-table__tables div.selected {
+    border-color: #FF9F43;
+    background-color: rgba(255, 159, 67, 0.16);
+    color: #FF9F43;
 }
 
 .code-generation__main__right {
@@ -163,9 +173,31 @@
 }
 
 .code-generation__main__right__header__line {
+    margin-bottom: 62px;
+    display: flex;
+    align-items: center;
+}
+
+.code-generation__main__right__header__line div {
     height: 1px;
     background-color: #DBDADE;
-    margin-bottom: 62px;
+}
+
+.code-generation__main__right__header__line div.selected {
+    height: 3px;
+    background-color: #7367F0;
+}
+
+.code-generation__main__right__header__line div:first-child {
+    width: 31%;
+}
+
+.code-generation__main__right__header__line div:nth-child(2) {
+    width: 43%;
+}
+
+.code-generation__main__right__header__line div:last-child {
+    width: 26%;
 }
 
 .code-generation__main__right__QR-section {
@@ -178,12 +210,27 @@
     margin-bottom: 24px;
 }
 
+.code-generation__main__right__QR-section.circle {
+    border-radius: 100%;
+}
+
+
 .code-generation__main__right__QR-section h5 {
     font-family: "Inter";
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 225%;
     color: #FF9F43;
+}
+
+.code-generation__main__right__QR-section h5.rectangle {
+    margin-top: 2px;
+    margin-bottom: 13px;
+}
+
+.code-generation__main__right__QR-section h5.circle {
+    margin-top: 2px;
+    margin-bottom: 4px;
 }
 
 .code-generation__main__right__QR-section h5 span {
@@ -195,6 +242,10 @@
     font-size: 2.2rem;
     line-height: 136%;
     color: #101113;
+}
+
+.code-generation__main__right__QR-section__view-menu.rectangle,
+.code-generation__main__right__QR-section__view-menu.circle {
     margin-bottom: 4px;
 }
 
@@ -203,7 +254,18 @@
     font-size: 1.2rem;
     line-height: 150%;
     color: #101113;
+}
+
+.code-generation__main__right__QR-section__description.sqare {
     margin-bottom: 13px;
+} 
+
+.code-generation__main__right__QR-section__description.rectangle {
+    margin-bottom: 16px;
+}
+
+.code-generation__main__right__QR-section__description.circle {
+    margin-bottom: 14px;
 }
 
 .code-generation__main__right__QR-section__QR-code {
@@ -214,13 +276,33 @@
     background-size: cover;
 }
 
+.code-generation__main__right__QR-section__QR-code.sqare {
+    margin-bottom: 1px;
+}
+
+.code-generation__main__right__QR-section__QR-code.rectangle,
+.code-generation__main__right__QR-section__QR-code.circle {
+    margin-bottom: 4px;
+}
+
 .code-generation__main__right__QR-section a {
     font-weight: 400;
     font-size: 1.2rem;
     line-height: 150%;
     color: rgba(194, 70, 36, 0.6);
     display: block;
+}
+
+.code-generation__main__right__QR-section a.sqare {
     margin-bottom: 9px;
+}
+
+.code-generation__main__right__QR-section a.rectangle {
+    margin-bottom: 18px;
+}
+
+.code-generation__main__right__QR-section a.circle {
+    margin-bottom: 12px;
 }
 
 .code-generation__main__right__QR-section__table-number {
@@ -236,6 +318,15 @@
     line-height: 107%;
     color: #101113;
     margin: 0 auto;
+}
+
+.code-generation__main__right__QR-section__table-number.rectangle {
+    margin-bottom: 9px;
+}
+
+.code-generation__main__right__QR-section__table-number.circle {
+    width: 27%;
+    margin-bottom: 4px;
 }
 
 .code-generation__main__right__download-section {
@@ -271,6 +362,11 @@
     column-gap: 6.2%;
     box-shadow: 0px 2px 4px rgba(165, 163, 174, 0.3);
     border-radius: 6px;
+    cursor: pointer;
+}
+
+.code-generation__main__right__download-section__button:hover {
+    background-color: #C24624;
 }
 
 .code-generation__main__right__download-section__button p {
