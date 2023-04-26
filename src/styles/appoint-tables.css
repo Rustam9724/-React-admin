@@ -1,0 +1,262 @@
+.appoint-tables {
+    margin-bottom: 160px;
+}
+
+.appoint-tables h2 {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 136%;
+    color: #4B465C;
+    opacity: 0.9;
+    margin-bottom: 24px;
+}
+
+.appoint-tables__main {
+    padding: 24px 2.1%;
+    background-color: white;
+    display: flex;
+    column-gap: 7.1%;
+}
+
+.appoint-tables__main h3 {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 133%;
+    color: #4B465C;
+    opacity: 0.9;
+    margin-bottom: 24px;
+}
+
+.appoint-tables__main__left {
+    width: 41%;
+}
+
+.appoint-tables__main__left__unat-tables {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.appoint-tables__main__left__unat-tables label {
+    width: 66%
+}
+
+.appoint-tables__main__left__unat-tables label p {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 118%;
+    color: #4B465C;
+    opacity: 0.9;
+    margin-bottom: 4px;
+}
+
+.appoint-tables__main__left__unat-tables label input {
+    width: 100%;
+    height: 35px;
+    outline: 1px solid #DBDADE;
+    padding: 0 3.3%;
+    border-radius: 4px;
+}
+
+.appoint-tables__main__left__unat-tables label input::placeholder {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 162%;
+    color: #4B465C;
+    opacity: 0.4;
+}
+
+.appoint-tables__main__left__unat-tables button {
+    width: 28%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF9F43;
+    color: white;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 123%;
+    letter-spacing: 0.43px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.appoint-tables__main__left__unat-tables button:hover {
+    background-color: #C24624;
+}
+
+.appoint-tables__main__left__waiter {
+    height: 70px;
+    padding-left: 4.3%;
+    display: flex;
+    column-gap: 2.2%;
+    border: 1px solid #DBDADE;
+    border-radius: 6px;
+    align-items: center;
+}
+
+.appoint-tables__main__left__waiter:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.appoint-tables__main__left__waiter__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: #FF9F43;
+    color: white;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 154%;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.appoint-tables__main__left__waiter__info p:first-child {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 147%;
+    color: #4B465C;
+    opacity: 0.8;
+}
+
+.appoint-tables__main__left__waiter__info p:last-child {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 154%;
+    color: #FF9F43;
+}
+
+.appoint-tables__main__right {
+    width: 48%; /*541px*/
+}
+
+.appoint-tables__main__right__tables {
+    margin-bottom: 24px;
+}
+
+.appoint-tables__main__right__tables p {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 118%;
+    color: #4B465C;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.appoint-tables__main__right__tables__tables {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 1.6%;
+    row-gap: 8px;
+}
+
+.appoint-tables__main__right__tables__tables div {
+    width: 11%;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #DBDADE;
+    border-radius: 6px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 118%;
+    color: #4B465C;
+    opacity: 0.4;
+}
+
+.appoint-tables__main__right button {
+    width: 27%;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    color: white;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 118%;
+    letter-spacing: 0.43px;
+    background-color: #FF9F43;
+    margin-left: auto;
+    margin-bottom: 48px;
+    cursor: pointer;
+}
+
+.appoint-tables__main__right button:hover {
+    background-color: #C24624;
+}
+
+.appoint-tables__main__right__designations {
+    width: 93%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 12px;
+}
+
+.appoint-tables__main__right__designations div {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    column-gap: 4%;
+}
+
+.appoint-tables__main__right__designations div div {
+    width: 24%;
+    height: 39px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 118%;
+}
+
+.appoint-tables__main__right__designations div:first-child div {
+    border: 1px solid #FF9F43;
+    background-color: rgba(255, 159, 67, 0.16);
+    color: #FF9F43;
+}
+
+.appoint-tables__main__right__designations div:nth-child(2) div {
+    border: 1px solid #EA5455;
+    background-color: rgba(234, 84, 85, 0.16);
+    color: #EA5455;
+}
+
+.appoint-tables__main__right__designations div:nth-child(3) div {
+    border: 1px solid #DBDADE;
+    color: #DBDADE
+}
+
+.appoint-tables__main__right__designations div:last-child div {
+    border: 1px solid #4B465C;
+    color: #4B465C;
+    background: rgba(168, 170, 174, 0.4); 
+}
+
+.appoint-tables__main__right__designations div p {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 118%;
+    color: #4B465C;
+    opacity: 0.9;
+}

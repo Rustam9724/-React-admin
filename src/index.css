@@ -10,6 +10,7 @@
 @import './styles/meels-and-drinks.css';
 @import './styles/add-meel.css';
 @import './styles/code-generation.css';
+@import './styles/appoint-tables.css';
 
 *, ul, p, h1, h2, h3, h4, button, body, input, ::before, ::after, div {
   padding: 0;

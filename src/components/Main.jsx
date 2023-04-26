@@ -8,7 +8,7 @@ import { categoriesList, meelsAndDrinksList } from './object';
 import MeelsAndDrinks from './MeelsAndDrinks.jsx';
 import AddMeel from './AddMeel.jsx';
 import CodeGeneration from './CodeGeneration.jsx';
-
+import AppointTables from './AppointTables.jsx';
 
 function Main() {
     const [isMenuItemOpen, setIsMenuItemOpen] = useState(false);
@@ -35,6 +35,8 @@ function Main() {
         show = <AddMeel meelsAndDrinksListState={meelsAndDrinksListState} setMeelsAndDrinksListState={setMeelsAndDrinksListState} setOpenComponent={setOpenComponent}/>
     } else if (openComponent === 'CodeGeneration') {
         show = <CodeGeneration />
+    } else if (openComponent === 'AppointTables') {
+        show = <AppointTables />
     }
     
     function asideOpen() {
@@ -125,13 +127,13 @@ function Main() {
                 {
                         isTablesItemOpen &&
                             <>
-                                <div className="aside__item aside__item-drop-down">
+                                <div className="aside__item aside__item-drop-down" onClick={() => setOpenComponent('AppointTables')}>
                                     <div></div>
                                     <p>Назначение столов</p>
                                 </div>
                                 <div className="aside__item aside__item-drop-down" onClick={() => setOpenComponent('CodeGeneration')}>
                                     <div></div>
-                                    <p>Генераци QR-кодов</p>
+                                    <p>Генерация QR-кодов</p>
                                 </div>
                             </>
                     }
