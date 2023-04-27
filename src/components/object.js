@@ -57,4 +57,37 @@ const meelsAndDrinksList = [
     },
 ]
 
-export { categoriesList, meelsAndDrinksList };
+const waiters = [
+    {
+        id: nanoid(),
+        name: "Marcelino Perello",
+        tables: [1, 20, 24],
+    },
+    { 
+        id: nanoid(),
+        name: "Diego Rolan",
+        tables: [],
+    },
+    {
+        id: nanoid(),
+        name: "Kristina Lilley",
+        tables: [],
+    },
+    {
+        id: nanoid(),
+        name: "Dmitry Aleksidze",
+        tables: [],
+    },
+    {
+        id: nanoid(),
+        name: "Lev Footlik",
+        tables: [15],
+    },
+    {
+        id: nanoid(),
+        name: "Pierre Laffitte",
+        tables: [],
+    }
+]
+
+export { categoriesList, meelsAndDrinksList, waiters };

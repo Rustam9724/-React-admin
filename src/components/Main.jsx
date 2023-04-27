@@ -4,7 +4,7 @@ import Categories from './Categories';
 import AddCategory from './AddCategory.jsx';
 import {} from 'nanoid';
 import Footer from './Footer';
-import { categoriesList, meelsAndDrinksList } from './object';
+import { categoriesList, meelsAndDrinksList, waiters } from './object';
 import MeelsAndDrinks from './MeelsAndDrinks.jsx';
 import AddMeel from './AddMeel.jsx';
 import CodeGeneration from './CodeGeneration.jsx';
@@ -19,7 +19,8 @@ function Main() {
     const [isSubscribeItemOpen, setIsSubscribeItemOpen] = useState(false);
     const [openComponent, setOpenComponent] = useState('Summary');
     const [categoriesListState, setCategoriesListState] = useState(categoriesList)
-    const [meelsAndDrinksListState, setMeelsAndDrinksListState] = useState(meelsAndDrinksList)
+    const [meelsAndDrinksListState, setMeelsAndDrinksListState] = useState(meelsAndDrinksList);
+    const [waitersState, setWaitersState] = useState(waiters);
 
     let show;
 
@@ -36,7 +37,7 @@ function Main() {
     } else if (openComponent === 'CodeGeneration') {
         show = <CodeGeneration />
     } else if (openComponent === 'AppointTables') {
-        show = <AppointTables />
+        show = <AppointTables waitersState={waitersState} setWaitersState={setWaitersState}/>
     }
     
     function asideOpen() {

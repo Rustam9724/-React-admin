@@ -102,6 +102,13 @@
     align-items: center;
 }
 
+.appoint-tables__main__left__waiter.active:hover {
+    border: 1px solid #FF9F43;
+    background-color: rgba(255, 159, 67, 0.16);
+    color: #FF9F43;
+    cursor: pointer;
+}
+
 .appoint-tables__main__left__waiter:not(:last-child) {
     margin-bottom: 14px;
 }
@@ -110,7 +117,6 @@
     width: 32px;
     height: 32px;
     border-radius: 100%;
-    background-color: #FF9F43;
     color: white;
     font-family: "Inter";
     font-weight: 700;
@@ -118,6 +124,12 @@
     line-height: 154%;
     text-align: center;
     padding-top: 5px;
+    background-color: #DBDADE;
+}
+
+.appoint-tables__main__left__waiter__avatar.active {
+    background-color: #FF9F43;
+    
 }
 
 .appoint-tables__main__left__waiter__info p:first-child {
@@ -125,8 +137,12 @@
     font-weight: 600;
     font-size: 1.3rem;
     line-height: 147%;
-    color: #4B465C;
     opacity: 0.8;
+    color: #DBDADE;
+}
+
+.appoint-tables__main__left__waiter__info.active p:first-child {
+    color: #4B465C;
 }
 
 .appoint-tables__main__left__waiter__info p:last-child {
@@ -136,6 +152,8 @@
     line-height: 154%;
     color: #FF9F43;
 }
+
+
 
 .appoint-tables__main__right {
     width: 48%; /*541px*/
@@ -177,6 +195,32 @@
     line-height: 118%;
     color: #4B465C;
     opacity: 0.4;
+    cursor: pointer;
+}
+
+.appoint-tables__main__right__tables__tables div:hover {
+    border: 1px solid #FF9F43;
+    background-color: rgba(255, 159, 67, 0.16);
+    color: #FF9F43;
+}
+
+.appoint-tables__main__right__tables__tables div.unat-table {
+    border: 1px solid #EA5455;
+    background-color: rgba(234, 84, 85, 0.16);
+    color: #EA5455;
+    cursor: auto;
+}
+
+.appoint-tables__main__right__tables__tables div.selected-table {
+    border: 1px solid #FF9F43;
+    background-color: rgba(255, 159, 67, 0.16);
+    color: #FF9F43;
+}
+
+.appoint-tables__main__right__tables__tables div.assign-table {
+    border: 1px solid #4B465C;
+    color: #4B465C;
+    background: rgba(168, 170, 174, 0.4); 
 }
 
 .appoint-tables__main__right button {
@@ -186,15 +230,19 @@
     justify-content: center;
     align-items: center;
     border-radius: 6px;
-    color: white;
     font-family: "Inter";
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 118%;
     letter-spacing: 0.43px;
-    background-color: #FF9F43;
     margin-left: auto;
     margin-bottom: 48px;
+    color: white;
+    background-color: #DBDADE;
+}
+
+.appoint-tables__main__right button.active {
+    background-color: #FF9F43;
     cursor: pointer;
 }
 
