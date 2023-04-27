@@ -84,7 +84,7 @@ function AppointTables({waitersState, setWaitersState}) {
                     <div className="appoint-tables__main__left__unat-tables">
                         <label>
                             <p>Необслуживаемые столы</p>
-                            <input type="text" placeholder="Введите номера через запятую" value={inputValue} onChange={event => setInputValue(event.target.value)}/>
+                            <input type="text" placeholder="Введите через запятую" value={inputValue} onChange={event => setInputValue(event.target.value)}/>
                         </label>
                         <button onClick={applyBtnHandler}>Применить</button>
                     </div>
