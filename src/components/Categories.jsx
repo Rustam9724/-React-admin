@@ -2,7 +2,6 @@ import { useState, useRef } from 'react';
 
 function Categories({categoriesListState, setCategoriesListState, setOpenComponent}) {
     const [searchValue, setSearchValue] = useState(''); 
-    // const [offsetTopValue, setOffsetTopValue] = useState(0);
 
     function editCategory(event, elem) {
         const date = new Date();

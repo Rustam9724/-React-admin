@@ -1,9 +1,58 @@
+import { orders } from './object';
+import { useState } from 'react';
+
 function OrdersList() {
+    const [searchValue, setSearchValue] = useState(''); 
+
+    let ordersResult;
+    if (searchValue) {
+        ordersResult = orders.filter(order => {
+            return `${order.number}`.indexOf(searchValue.toLowerCase()) >= 0;
+        })
+    } else {
+        ordersResult = orders;
+    }
+
+    ordersResult = ordersResult.map(order => {
+        let status;
+        switch (order.status) {
+            case 'expects':
+                status = 'Ожидает';
+                break;
+            case 'accepted':
+                status = 'Принят';
+                break;
+            case 'completed':
+                status = 'Завершён';
+                break;
+            case 'getready':
+                status = 'Готовится';
+                break;
+            case 'canceled':
+                status = 'Отменён';
+                break;
+            default: 
+                status = '';    
+        }
+        return (
+            <div className="orders-list__main__list__order" key={order.id}>
+                <div className="orders-list__main__list__order__number">{order.number}</div>
+                <div className="orders-list__main__list__order__table">{order.table}</div>
+                <div className="orders-list__main__list__order__cost">{order.cost}</div>
+                <div className="orders-list__main__list__order__status">
+                    <p className={order.status}>{status}</p>
+                </div>
+                <div className="orders-list__main__list__order__date">{order.date}</div>
+                <div className="orders-list__main__list__order__last-change">{order.lastChange}</div>
+            </div>
+        )
+    })
+
     return (
         <div className="orders-list">
             <h2>Заказы</h2>
                 <div className="orders-list__search">
-                    <input type="text" placeholder="Поиск"/>
+                    <input type="text" placeholder="Поиск" value={searchValue} onChange={event => setSearchValue(event.target.value)} placeholder="Введите номер заказа"/>
                 </div>
             <div className="orders-list__main">
                 <div className="orders-list__main__header">
@@ -52,106 +101,7 @@ function OrdersList() {
                 </div>
                 <div className="orders-list__main__list">
                     <div className="meels-and-drinks__main__list__wrapper">
-                        <div className="orders-list__main__list__order">
-                            <div className="orders-list__main__list__order__number">#2232</div>
-                            <div className="orders-list__main__list__order__table">12</div>
-                            <div className="orders-list__main__list__order__cost">454</div>
-                            <div className="orders-list__main__list__order__status">
-                                <p className="expects">Ожидает</p>
-                            </div>
-                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
-                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
-                        </div>
-                        <div className="orders-list__main__list__order">
-                            <div className="orders-list__main__list__order__number">#6977</div>
-                            <div className="orders-list__main__list__order__table">2</div>
-                            <div className="orders-list__main__list__order__cost">631</div>
-                            <div className="orders-list__main__list__order__status">
-                                <p className="accepted">Принят</p>
-                            </div>
-                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
-                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
-                        </div>
-                        <div className="orders-list__main__list__order">
-                            <div className="orders-list__main__list__order__number">#9750</div>
-                            <div className="orders-list__main__list__order__table">39</div>
-                            <div className="orders-list__main__list__order__cost">751</div>
-                            <div className="orders-list__main__list__order__status">
-                                <p className="completed">Завершён</p>
-                            </div>
-                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
-                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
-                        </div>
-                        <div className="orders-list__main__list__order">
-                            <div className="orders-list__main__list__order__number">#2374</div>
-                            <div className="orders-list__main__list__order__table">32</div>
-                            <div className="orders-list__main__list__order__cost">145</div>
-                            <div className="orders-list__main__list__order__status">
-                                <p className="getready">Готовится</p>
-                            </div>
-                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
-                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
-                        </div>
-                        <div className="orders-list__main__list__order">
-                            <div className="orders-list__main__list__order__number">#636</div>
-                            <div className="orders-list__main__list__order__table">4</div>
-                            <div className="orders-list__main__list__order__cost">182</div>
-                            <div className="orders-list__main__list__order__status">
-                                <p className="canceled">Отменён</p>
-                            </div>
-                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
-                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
-                        </div>
-                        <div className="orders-list__main__list__order">
-                            <div className="orders-list__main__list__order__number">#7452</div>
-                            <div className="orders-list__main__list__order__table">43</div>
-                            <div className="orders-list__main__list__order__cost">749</div>
-                            <div className="orders-list__main__list__order__status">
-                                <p className="expects">Ожидает</p>
-                            </div>
-                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
-                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
-                        </div>
-                        <div className="orders-list__main__list__order">
-                            <div className="orders-list__main__list__order__number">#5070</div>
-                            <div className="orders-list__main__list__order__table">42</div>
-                            <div className="orders-list__main__list__order__cost">605</div>
-                            <div className="orders-list__main__list__order__status">
-                                <p className="accepted">Принят</p>
-                            </div>
-                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
-                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
-                        </div>
-                        <div className="orders-list__main__list__order">
-                            <div className="orders-list__main__list__order__number">#8484</div>
-                            <div className="orders-list__main__list__order__table">2</div>
-                            <div className="orders-list__main__list__order__cost">447</div>
-                            <div className="orders-list__main__list__order__status">
-                                <p className="accepted">Принят</p>
-                            </div>
-                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
-                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
-                        </div>
-                        <div className="orders-list__main__list__order">
-                            <div className="orders-list__main__list__order__number">#7213</div>
-                            <div className="orders-list__main__list__order__table">30</div>
-                            <div className="orders-list__main__list__order__cost">749</div>
-                            <div className="orders-list__main__list__order__status">
-                                <p className="accepted">Принят</p>
-                            </div>
-                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
-                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
-                        </div>
-                        <div className="orders-list__main__list__order">
-                            <div className="orders-list__main__list__order__number">#4105</div>
-                            <div className="orders-list__main__list__order__table">8</div>
-                            <div className="orders-list__main__list__order__cost">574</div>
-                            <div className="orders-list__main__list__order__status">
-                                <p className="accepted">Принят</p>
-                            </div>
-                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
-                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
-                        </div>
+                        {ordersResult}
                     </div>
                 </div>
             </div>

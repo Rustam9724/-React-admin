@@ -1,0 +1,258 @@
+.orders-list {
+    margin-bottom: 125px;
+}
+
+@media (min-width: 712px) and (min-height: 1138px) and (max-width: 1024px) and (max-height: 1368px) {
+    .orders-list {
+        margin-bottom: 440px;
+    }
+}
+
+.orders-list h2 {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 136%;
+    color: #4B465C;
+    opacity: 0.9;
+    margin-bottom: 24px;
+}
+
+.orders-list__search {
+    padding: 24px 2.12%;
+    background-color: white;
+    box-shadow: 0px 4px 18px rgba(75, 70, 92, 0.1);
+    border-radius: 6px 6px 0 0;
+}
+
+.orders-list__search input {
+    width: 29%;
+    height: 38px;
+    border-radius: 6px;
+    padding: 7px 3.5%;
+    outline: 1px solid #DBDADE;
+}
+
+@media (max-width: 814px) {
+    .orders-list__search input {
+        width: 34%;
+    }
+}
+
+@media (max-width: 664px) {
+    .orders-list__search input {
+        width: 39%;
+    }
+}
+
+@media (max-width: 564px) {
+    .orders-list__search input {
+        width: 49%;
+    }
+}
+
+@media (max-width: 434px) {
+    .orders-list__search input {
+        width: 54%;
+    }
+}
+
+.orders-list__search input::placeholder {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 160%;
+    color: #4B465C;
+    opacity: 0.4;
+}
+
+.orders-list__main__header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 118%;
+    letter-spacing: 1px;
+    border-top: 1px solid #DBDADE;
+    z-index: 2;
+}
+
+@media (max-width: 1234px) {
+    .orders-list__main__header {
+        font-size: 0.98rem;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1054px) {
+    .orders-list__main__header {
+        font-size: 0.73rem;
+    }
+}
+
+@media (max-width: 827px) {
+    .orders-list__main__header {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 424px) {
+    .orders-list__main__header {
+        font-size: 0.53rem;
+    }
+}
+
+.orders-list__main__header__section {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.7%;
+}
+
+.orders-list__main__header__section:first-child {
+    width: 13%;
+}
+
+.orders-list__main__header__section:nth-child(2) {
+    width: 11%;
+}
+
+.orders-list__main__header__section:nth-child(3) {
+    width: 14%;
+}
+
+.orders-list__main__header__section:nth-child(4) {
+    width: 16%;
+}
+
+.orders-list__main__header__section:nth-child(5) {
+    width: 22%;
+}
+
+.orders-list__main__header__section:last-child {
+    width: 24%;
+}
+
+.orders-list__main__header__section p {
+    flex-grow: 1;
+    color: #4B465C;
+    opacity: 0.9;
+} 
+
+.orders-list__main__header__section > div {
+    width: 18px;
+    height: 36px;
+}
+
+@media (max-width: 449px) {
+    .orders-list__main__header__section > div {
+        width: 14px;
+        height: 28px;
+    }
+}
+
+.orders-list__main__header__section > div div {
+    width: 14px;
+    height: 14px;
+}
+
+.orders-list__main__header__section > div div:first-child {
+    background-image: url("../assets/fi_chevron-up.png");
+}
+
+.orders-list__main__header__section > div div:nth-child(2) {
+    background-image: url("../assets/chevron-down.png");
+}
+
+.orders-list__main__list {
+    background-color: white;
+    box-shadow: 0px 4px 18px rgba(75, 70, 92, 0.1);
+    border-radius: 0 0 6px 6px;
+}
+
+.orders-list__main__list__order {
+    height: 58px;
+    border-top: 1px solid #DBDADE;
+    display: flex;
+    align-items: center;
+    padding-left: 1.77%;
+    font-family: "Inter";
+    font-size: 1.5rem;
+    line-height: 147%;
+    font-weight: 400;
+    color: #4B465C;
+    opacity: 0.8;
+}
+
+@media (max-width: 774px) {
+    .orders-list__main__list__order {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 574px) {
+    .orders-list__main__list__order {
+        font-size: 0.83rem;
+    }
+}
+
+.orders-list__main__list__order__number {
+    width: 13%;
+    color: #FF9F43;
+}
+
+.orders-list__main__list__order__table {
+    width: 11%;
+}
+
+.orders-list__main__list__order__cost {
+    width: 14%;
+}
+
+.orders-list__main__list__order__status {
+    width: 16%;
+}
+
+.orders-list__main__list__order__status p {
+    border-radius: 4px;
+    padding: 5px 5.6%;
+    width: max-content;
+
+}
+
+.orders-list__main__list__order__status p.expects {
+    background-color:rgba(168, 170, 174, 0.16);
+    color: #A8AAAE;
+}
+
+.orders-list__main__list__order__status p.accepted {
+    background-color: rgba(40, 199, 111, 0.16);
+    color: #28C76F;
+}
+
+.orders-list__main__list__order__status p.completed {
+    background-color: rgba(0, 207, 232, 0.16);
+    color: #00CFE8;
+}
+
+.orders-list__main__list__order__status p.getready {
+    background-color: rgba(255, 159, 67, 0.16);
+    color: #FF9F43;
+}
+
+.orders-list__main__list__order__status p.canceled {
+    background-color: rgba(234, 84, 85, 0.16);
+    color: #EA5455;
+}
+
+.orders-list__main__list__order__date {
+    width: 22%;
+    padding-left: 1%;
+}
+
+.orders-list__main__list__order__last-change {
+    width: 24%;
+    padding-left: 1.5%;
+}

@@ -90,4 +90,97 @@ const waiters = [
     }
 ]
 
-export { categoriesList, meelsAndDrinksList, waiters };
+const orders = [
+    {
+        id: nanoid(),
+        number: 2232,
+        table: 12, 
+        status: 'expects',
+        date: '28.04.2023, 16:33',
+        lastChange: '28.04.2023, 16:33',
+        cost: 550,
+    },
+    {
+        id: nanoid(),
+        number: 6977,
+        table: 2, 
+        status: 'accepted',
+        date: '28.04.2023, 16:33',
+        lastChange: '28.04.2023, 16:33',
+        cost: 550,
+    },
+    {
+        id: nanoid(),
+        number: 9750,
+        table: 39, 
+        status: 'completed',
+        date: '28.04.2023, 16:33',
+        lastChange: '28.04.2023, 16:33',
+        cost: 550,
+    },
+    {
+        id: nanoid(),
+        number: 2374,
+        table: 32, 
+        status: 'getready',
+        date: '28.04.2023, 16:33',
+        lastChange: '28.04.2023, 16:33',
+        cost: 550,
+    },
+    {
+        id: nanoid(),
+        number: 636 ,
+        table: 4, 
+        status: 'canceled',
+        date: '28.04.2023, 16:33',
+        lastChange: '28.04.2023, 16:33',
+        cost: 550,
+    },
+    {
+        id: nanoid(),
+        number: 7452,
+        table: 43, 
+        status: 'expects',
+        date: '28.04.2023, 16:33',
+        lastChange: '28.04.2023, 16:33',
+        cost: 550,
+    },
+    {
+        id: nanoid(),
+        number: 5070,
+        table: 42, 
+        status: 'accepted',
+        date: '28.04.2023, 16:33',
+        lastChange: '28.04.2023, 16:33',
+        cost: 550,
+    },
+    {
+        id: nanoid(),
+        number: 8484,
+        table: 2, 
+        status: 'accepted',
+        date: '28.04.2023, 16:33',
+        lastChange: '28.04.2023, 16:33',
+        cost: 550,
+    },
+    {
+        id: nanoid(),
+        number: 7213,
+        table: 30, 
+        status: 'accepted',
+        date: '28.04.2023, 16:33',
+        lastChange: '28.04.2023, 16:33',
+        cost: 550,
+    },
+    {
+        id: nanoid(),
+        number: 4105,
+        table: 8, 
+        status: 'accepted',
+        date: '28.04.2023, 16:33',
+        lastChange: '28.04.2023, 16:33',
+        cost: 550,
+    }
+]
+
+export { categoriesList, meelsAndDrinksList, waiters, orders };
