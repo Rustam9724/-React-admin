@@ -9,6 +9,7 @@ import MeelsAndDrinks from './MeelsAndDrinks.jsx';
 import AddMeel from './AddMeel.jsx';
 import CodeGeneration from './CodeGeneration.jsx';
 import AppointTables from './AppointTables.jsx';
+import OrdersList from './OrdersList.jsx';
 
 function Main() {
     const [isMenuItemOpen, setIsMenuItemOpen] = useState(false);
@@ -38,6 +39,8 @@ function Main() {
         show = <CodeGeneration />
     } else if (openComponent === 'AppointTables') {
         show = <AppointTables waitersState={waitersState} setWaitersState={setWaitersState}/>
+    } else if (openComponent === 'OrdersList') {
+        show = <OrdersList />
     }
     
     function asideOpen() {
@@ -138,7 +141,7 @@ function Main() {
                                 </div>
                             </>
                     }
-                <div className="aside__item aside__item-order-list">
+                <div className="aside__item aside__item-order-list" onClick={() => setOpenComponent('OrdersList')}>
                     <div></div>    
                     <p>Список заказов</p>
                 </div>
