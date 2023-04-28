@@ -14,36 +14,36 @@ function OrdersList() {
                             <div></div>
                         </div>
                     </div>
-                    <div className="meels-and-drinks__main__header__section">
+                    <div className="orders-list__main__header__section">
                         <p>СТОЛ</p>
                         <div>
                             <div></div>
                             <div></div>
                         </div>
                     </div>
-                    <div className="meels-and-drinks__main__header__section">
+                    <div className="orders-list__main__header__section">
                         <p>СУММА, РУБ</p>
                         <div>
                             <div></div>
                             <div></div>
                         </div>
                     </div>
-                    <div className="meels-and-drinks__main__header__section">
+                    <div className="orders-list__main__header__section">
                         <p>СТАТУС</p>
                         <div>
                             <div></div>
                             <div></div>
                         </div>
                     </div>
-                    <div className="meels-and-drinks__main__header__section">
+                    <div className="orders-list__main__header__section">
                         <p>ДАТА СОЗДАНИЯ</p>
                         <div>
                             <div></div>
                             <div></div>
                         </div>
                     </div>
-                    <div className="meels-and-drinks__main__header__section">
-                        <p>Последнее изменение</p>
+                    <div className="orders-list__main__header__section">
+                        <p>ПОСЛЕДНЕЕ ИЗМЕНЕНИЕ</p>
                         <div>
                             <div></div>
                             <div></div>
@@ -52,85 +52,105 @@ function OrdersList() {
                 </div>
                 <div className="orders-list__main__list">
                     <div className="meels-and-drinks__main__list__wrapper">
-                        <div classname="orders-list__main__list__order">
-                            <div># 2232</div>
-                            <div>12</div>
-                            <div>454</div>
-                            <div className="orders-list__main__list__order__status-expects">Ожидает</div>
-                            <div>28.04.2023, 10:21</div>
-                            <div>28.04.2023, 10:21</div>
+                        <div className="orders-list__main__list__order">
+                            <div className="orders-list__main__list__order__number">#2232</div>
+                            <div className="orders-list__main__list__order__table">12</div>
+                            <div className="orders-list__main__list__order__cost">454</div>
+                            <div className="orders-list__main__list__order__status">
+                                <p className="expects">Ожидает</p>
+                            </div>
+                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
                         </div>
                         <div className="orders-list__main__list__order">
-                            <div># 6977</div>
-                            <div>2</div>
-                            <div>631</div>
-                            <div className="orders-list__main__list__order__status-accepted">Принят</div>
-                            <div>28.04.2023, 10:21</div>
-                            <div>28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__number">#6977</div>
+                            <div className="orders-list__main__list__order__table">2</div>
+                            <div className="orders-list__main__list__order__cost">631</div>
+                            <div className="orders-list__main__list__order__status">
+                                <p className="accepted">Принят</p>
+                            </div>
+                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
                         </div>
                         <div className="orders-list__main__list__order">
-                            <div># 9750</div>
-                            <div>39</div>
-                            <div>751</div>
-                            <div className="orders-list__main__list__order__status-completed">Завершён</div>
-                            <div>28.04.2023, 10:21</div>
-                            <div>28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__number">#9750</div>
+                            <div className="orders-list__main__list__order__table">39</div>
+                            <div className="orders-list__main__list__order__cost">751</div>
+                            <div className="orders-list__main__list__order__status">
+                                <p className="completed">Завершён</p>
+                            </div>
+                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
                         </div>
                         <div className="orders-list__main__list__order">
-                            <div># 2374</div>
-                            <div>32</div>
-                            <div>145</div>
-                            <div className="orders-list__main__list__order__status-getready">Готовится</div>
-                            <div>28.04.2023, 10:21</div>
-                            <div>28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__number">#2374</div>
+                            <div className="orders-list__main__list__order__table">32</div>
+                            <div className="orders-list__main__list__order__cost">145</div>
+                            <div className="orders-list__main__list__order__status">
+                                <p className="getready">Готовится</p>
+                            </div>
+                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
                         </div>
                         <div className="orders-list__main__list__order">
-                            <div># 636</div>
-                            <div>4</div>
-                            <div>182</div>
-                            <div className="orders-list__main__list__order__status-сanceled">Отменён</div>
-                            <div>28.04.2023, 10:21</div>
-                            <div>28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__number">#636</div>
+                            <div className="orders-list__main__list__order__table">4</div>
+                            <div className="orders-list__main__list__order__cost">182</div>
+                            <div className="orders-list__main__list__order__status">
+                                <p className="canceled">Отменён</p>
+                            </div>
+                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
                         </div>
                         <div className="orders-list__main__list__order">
-                            <div># 7452</div>
-                            <div>43</div>
-                            <div>749</div>
-                            <div className="orders-list__main__list__order__status-expects">Ожидает</div>
-                            <div>28.04.2023, 10:21</div>
-                            <div>28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__number">#7452</div>
+                            <div className="orders-list__main__list__order__table">43</div>
+                            <div className="orders-list__main__list__order__cost">749</div>
+                            <div className="orders-list__main__list__order__status">
+                                <p className="expects">Ожидает</p>
+                            </div>
+                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
                         </div>
                         <div className="orders-list__main__list__order">
-                            <div># 5070</div>
-                            <div>42</div>
-                            <div>605</div>
-                            <div className="orders-list__main__list__order__status-accepted">Принят</div>
-                            <div>28.04.2023, 10:21</div>
-                            <div>28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__number">#5070</div>
+                            <div className="orders-list__main__list__order__table">42</div>
+                            <div className="orders-list__main__list__order__cost">605</div>
+                            <div className="orders-list__main__list__order__status">
+                                <p className="accepted">Принят</p>
+                            </div>
+                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
                         </div>
                         <div className="orders-list__main__list__order">
-                            <div># 8484</div>
-                            <div>2</div>
-                            <div>447</div>
-                            <div className="orders-list__main__list__order__status-accepted">Принят</div>
-                            <div>28.04.2023, 10:21</div>
-                            <div>28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__number">#8484</div>
+                            <div className="orders-list__main__list__order__table">2</div>
+                            <div className="orders-list__main__list__order__cost">447</div>
+                            <div className="orders-list__main__list__order__status">
+                                <p className="accepted">Принят</p>
+                            </div>
+                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
                         </div>
                         <div className="orders-list__main__list__order">
-                            <div># 7213</div>
-                            <div>30</div>
-                            <div>749</div>
-                            <div className="orders-list__main__list__order__status-accepted">Принят</div>
-                            <div>28.04.2023, 10:21</div>
-                            <div>28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__number">#7213</div>
+                            <div className="orders-list__main__list__order__table">30</div>
+                            <div className="orders-list__main__list__order__cost">749</div>
+                            <div className="orders-list__main__list__order__status">
+                                <p className="accepted">Принят</p>
+                            </div>
+                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
                         </div>
                         <div className="orders-list__main__list__order">
-                            <div># 4105</div>
-                            <div>8</div>
-                            <div>574</div>
-                            <div className="orders-list__main__list__order__status-accepted">Принят</div>
-                            <div>28.04.2023, 10:21</div>
-                            <div>28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__number">#4105</div>
+                            <div className="orders-list__main__list__order__table">8</div>
+                            <div className="orders-list__main__list__order__cost">574</div>
+                            <div className="orders-list__main__list__order__status">
+                                <p className="accepted">Принят</p>
+                            </div>
+                            <div className="orders-list__main__list__order__date">28.04.2023, 10:21</div>
+                            <div className="orders-list__main__list__order__last-change">28.04.2023, 10:21</div>
                         </div>
                     </div>
                 </div>
