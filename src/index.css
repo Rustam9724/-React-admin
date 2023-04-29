@@ -12,6 +12,7 @@
 @import './styles/code-generation.css';
 @import './styles/appoint-tables.css';
 @import './styles/orders-list.css';
+@import './styles/order.css';
 
 *, ul, p, h1, h2, h3, h4, button, body, input, ::before, ::after, div {
   padding: 0;

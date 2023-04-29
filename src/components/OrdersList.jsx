@@ -1,8 +1,13 @@
 import { orders } from './object';
 import { useState } from 'react';
 
-function OrdersList() {
+function OrdersList({setOpenComponent, setOpenOrderNumber}) {
     const [searchValue, setSearchValue] = useState(''); 
+
+    function orderClickHandler(order) {
+        setOpenOrderNumber(order.number);
+        setOpenComponent('Order');
+    }
 
     let ordersResult;
     if (searchValue) {
@@ -35,7 +40,7 @@ function OrdersList() {
                 status = '';    
         }
         return (
-            <div className="orders-list__main__list__order" key={order.id}>
+            <div className="orders-list__main__list__order" key={order.id} onClick={() => orderClickHandler(order)}>
                 <div className="orders-list__main__list__order__number">{order.number}</div>
                 <div className="orders-list__main__list__order__table">{order.table}</div>
                 <div className="orders-list__main__list__order__cost">{order.cost}</div>

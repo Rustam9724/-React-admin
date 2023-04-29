@@ -10,6 +10,7 @@ import AddMeel from './AddMeel.jsx';
 import CodeGeneration from './CodeGeneration.jsx';
 import AppointTables from './AppointTables.jsx';
 import OrdersList from './OrdersList.jsx';
+import Order from './Order.jsx';
 
 function Main() {
     const [isMenuItemOpen, setIsMenuItemOpen] = useState(false);
@@ -22,6 +23,7 @@ function Main() {
     const [categoriesListState, setCategoriesListState] = useState(categoriesList)
     const [meelsAndDrinksListState, setMeelsAndDrinksListState] = useState(meelsAndDrinksList);
     const [waitersState, setWaitersState] = useState(waiters);
+    const [openOrderNumber, setOpenOrderNumber] = useState(null);
 
     let show;
 
@@ -40,7 +42,9 @@ function Main() {
     } else if (openComponent === 'AppointTables') {
         show = <AppointTables waitersState={waitersState} setWaitersState={setWaitersState}/>
     } else if (openComponent === 'OrdersList') {
-        show = <OrdersList />
+        show = <OrdersList setOpenComponent={setOpenComponent} setOpenOrderNumber={setOpenOrderNumber}/>
+    } else if (openComponent === 'Order') {
+        show = <Order openOrderNumber={openOrderNumber} />
     }
     
     function asideOpen() {
