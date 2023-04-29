@@ -1,6 +1,6 @@
 import { orders } from '../components/object';
 
-function Order({openOrderNumber}) {
+function Order({openOrderNumber, setOpenComponent}) {
     const openOrder = orders.find(order => {
         return order.number === openOrderNumber;
     })
@@ -8,7 +8,7 @@ function Order({openOrderNumber}) {
     return (
         <div className="order">
             <div className="order__title">
-                <div></div>
+                <div onClick={() => setOpenComponent('OrdersList')}></div>
                 <h2>Заказ <span>#{openOrder.number}</span></h2>
             </div>
             <div className="order__main">

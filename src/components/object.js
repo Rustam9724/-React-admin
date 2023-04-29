@@ -183,4 +183,43 @@ const orders = [
     }
 ]
 
-export { categoriesList, meelsAndDrinksList, waiters, orders };
+const employers = [
+    {
+        id: nanoid(),
+        name: "Edgar Jones",
+        post: "Systems Administrator",
+        email: "herminia47@hotmail.com",
+        lastChange: "22.02.2023, 00:00",
+        isEdit: false,
+        cls: "edgar-jones",
+    },
+    {
+        id: nanoid(),
+        name: "Linnie Summers",
+        post: "Programmer",
+        email: "hal_murazik@hotmail.com",
+        lastChange: "22.02.2023, 00:00",
+        isEdit: false,
+        cls: "linnie",
+    },
+    {
+        id: nanoid(),
+        name: "Isabelle Cole",
+        post: "Research Associate",
+        email: "joy47@hotmail.com",
+        lastChange: "22.02.2023, 00:00",
+        isEdit: false,
+        cls: "isabelle",
+    },
+    {
+        id: nanoid(),
+        name: "Jason Simpson",
+        post: "Operator",
+        email: "owen_Hayes@gmail.com",
+        lastChange: "22.02.2023, 00:00",
+        isEdit: false,
+        cls: "jason",
+    }
+]
+
+export { categoriesList, meelsAndDrinksList, waiters, orders, employers };

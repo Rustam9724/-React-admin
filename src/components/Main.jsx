@@ -11,6 +11,7 @@ import CodeGeneration from './CodeGeneration.jsx';
 import AppointTables from './AppointTables.jsx';
 import OrdersList from './OrdersList.jsx';
 import Order from './Order.jsx';
+import Employers from './Employers';
 
 function Main() {
     const [isMenuItemOpen, setIsMenuItemOpen] = useState(false);
@@ -44,7 +45,9 @@ function Main() {
     } else if (openComponent === 'OrdersList') {
         show = <OrdersList setOpenComponent={setOpenComponent} setOpenOrderNumber={setOpenOrderNumber}/>
     } else if (openComponent === 'Order') {
-        show = <Order openOrderNumber={openOrderNumber} />
+        show = <Order openOrderNumber={openOrderNumber} setOpenComponent={setOpenComponent}/>
+    } else if (openComponent === 'Employers') {
+        show = <Employers />
     }
     
     function asideOpen() {
@@ -149,7 +152,7 @@ function Main() {
                     <div></div>    
                     <p>Список заказов</p>
                 </div>
-                <div className="aside__item aside__item-employers">
+                <div className="aside__item aside__item-employers" onClick={() => setOpenComponent('Employers')}>
                     <div></div>    
                     <p>Сотрудники</p>
                 </div>

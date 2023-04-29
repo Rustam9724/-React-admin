@@ -184,6 +184,7 @@
     font-weight: 400;
     color: #4B465C;
     opacity: 0.8;
+    cursor: pointer;
 }
 
 @media (max-width: 774px) {
