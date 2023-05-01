@@ -64,19 +64,19 @@
     cursor: pointer;
 }
 
-@media (max-width: 1244px) {
+@media (max-width: 1284px) {
     .employers__search-and-add_add {
         width: 25%;
     }
 }
 
-@media (max-width: 799px) {
+@media (max-width: 844px) {
     .employers__search-and-add_add {
         width: 30%;
     }
 }
 
-@media (max-width: 666px) {
+@media (max-width: 699px) {
     .employers__search-and-add_add {
         width: 35%;
     }
@@ -127,6 +127,18 @@
     z-index: 2;
 }
 
+@media (max-width: 899px) {
+    .employers__main__header {
+        font-size: 0.98rem;
+    }
+}
+
+@media (max-width: 699px) {
+    .employers__main__header {
+        font-size: 0.74rem;
+    }
+}
+
 .employers__main__header__section {
     height: 48px;
     display: flex;
@@ -139,20 +151,50 @@
     width: 25%;
 }
 
+@media (max-width: 599px) {
+    .employers__main__header__section:first-child {
+        width: 23%;
+    }
+}
+
 .employers__main__header__section:nth-child(2) {
     width: 21%;
+}
+
+@media (max-width: 599px) {
+    .employers__main__header__section:nth-child(2) {
+        width: 19%;
+    }
 }
 
 .employers__main__header__section:nth-child(3) {
     width: 20%;
 }
 
+@media (max-width: 599px) {
+    .employers__main__header__section:nth-child(3) {
+        width: 18%;
+    }
+}
+
 .employers__main__header__section:nth-child(4) {
     width: 23%;
 }
 
+@media (max-width: 599px) {
+    .employers__main__header__section:nth-child(4) {
+        width: 21%;
+    }
+}
+
 .employers__main__header__section:last-child {
     width: 11%;
+}
+
+@media (max-width: 599px) {
+    .employers__main__header__section:last-child {
+        width: 19%;
+    }
 }
 
 .employers__main__header__section p {
@@ -209,10 +251,30 @@
     column-gap: 5%;
 }
 
+@media (max-width: 599px) {
+    .employers__main__list__section__name {
+        width: 23%;
+    }
+}
+
 .employers__main__list__section__name div {
     width: 38px;
     height: 38px;
     background-size: cover;
+}
+
+@media (max-width: 874px) {
+    .employers__main__list__section__name div {
+        width: 29px;
+        height: 29px;
+    }
+}
+
+@media (max-width: 599px) {
+    .employers__main__list__section__name div {
+        width: 22px;
+        height: 22px;
+    }
 }
 
 .employers__main__list__section__name div.edgar-jones {
@@ -240,16 +302,16 @@
     opacity: 0.8;
 }
 
-@media (max-width: 794px) {
+@media (max-width: 874px) {
     .employers__main__list__section__name p {
-        font-size: 1rem;
-    }
+        font-size: 1.1rem;
+    } 
 }
 
-@media (max-width: 474px) {
+@media (max-width: 599px) {
     .employers__main__list__section__name p {
-        font-size: 0.8rem;
-    }
+        font-size: 0.83rem;
+    } 
 }
 
 .employers__main__list__section__name input {
@@ -272,6 +334,26 @@
     opacity: 0.8;
 }
 
+@media (max-width: 1234px) {
+    .employers__main__list__section__post {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 749px) {
+    .employers__main__list__section__post {
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 599px) {
+    .employers__main__list__section__post {
+        width: 19%;
+        font-size: 0.62rem;
+    }
+}
+
+
 .employers__main__list__section__email {
     width: 20%;
     padding-left: 1.77%;
@@ -283,6 +365,30 @@
     line-height: 147%;
     color: #4B465C;
     opacity: 0.8;
+}
+
+@media (max-width: 1399px) {
+    .employers__main__list__section__email {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1094px) {
+    .employers__main__list__section__email {
+        font-size: 0.83rem;
+    }
+}
+
+@media (max-width: 874px) {
+    .employers__main__list__section__email {
+        font-size: 0.62rem;
+    }
+}
+
+@media (max-width: 599px) {
+    .employers__main__list__section__email {
+        width: 18%;
+    }
 }
 
 .employers__main__list__section__last-change {
@@ -298,12 +404,36 @@
     opacity: 0.8;
 }
 
+@media (max-width: 749px) {
+    .employers__main__list__section__last-change {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 599px) {
+    .employers__main__list__section__last-change {
+        font-size: 0.83rem;
+    }
+}
+
+@media (max-width: 599px) {
+    .employers__main__list__section__last-change {
+        width: 21%;
+    }
+}
+
 .employers__main__list__section__actions {
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 14%; 
     width: 11%;
+}
+
+@media (max-width: 599px) {
+    .employers__main__list__section__actions {
+        width: 19%;
+    }
 }
 
 .employers__main__list__section__actions div {
