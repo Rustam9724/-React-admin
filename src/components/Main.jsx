@@ -12,6 +12,7 @@ import AppointTables from './AppointTables.jsx';
 import OrdersList from './OrdersList.jsx';
 import Order from './Order.jsx';
 import Employers from './Employers';
+import AddEmployer from './AddEmployer';
 
 function Main() {
     const [isMenuItemOpen, setIsMenuItemOpen] = useState(false);
@@ -47,7 +48,9 @@ function Main() {
     } else if (openComponent === 'Order') {
         show = <Order openOrderNumber={openOrderNumber} setOpenComponent={setOpenComponent}/>
     } else if (openComponent === 'Employers') {
-        show = <Employers />
+        show = <Employers setOpenComponent={setOpenComponent}/>
+    } else if (openComponent === 'AddEmployer') {
+        show = <AddEmployer />
     }
     
     function asideOpen() {

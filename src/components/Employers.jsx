@@ -1,7 +1,7 @@
 import { employers } from '../components/object';
 import { useState } from 'react';
 
-function Employers() {
+function Employers({setOpenComponent}) {
     const [employersState, setEmployersState] = useState(employers);
     const [searchValue, setSearchValue] = useState('');
 
@@ -111,7 +111,7 @@ function Employers() {
                     <div></div>
                     <input type="text" placeholder="Поиск" value={searchValue} onChange={event => setSearchValue(event.target.value)}/>
                 </div>
-                <div className="employers__search-and-add_add">
+                <div className="employers__search-and-add_add" onClick={() => setOpenComponent('AddEmployer')}>
                     <div></div>
                     <p>Добавить сотрудника</p>
                 </div>
