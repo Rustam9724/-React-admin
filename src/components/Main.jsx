@@ -4,7 +4,7 @@ import Categories from './Categories';
 import AddCategory from './AddCategory.jsx';
 import {} from 'nanoid';
 import Footer from './Footer';
-import { categoriesList, meelsAndDrinksList, waiters } from './object';
+import { categoriesList, meelsAndDrinksList, waiters, employers } from './object';
 import MeelsAndDrinks from './MeelsAndDrinks.jsx';
 import AddMeel from './AddMeel.jsx';
 import CodeGeneration from './CodeGeneration.jsx';
@@ -26,6 +26,7 @@ function Main() {
     const [meelsAndDrinksListState, setMeelsAndDrinksListState] = useState(meelsAndDrinksList);
     const [waitersState, setWaitersState] = useState(waiters);
     const [openOrderNumber, setOpenOrderNumber] = useState(null);
+    const [employersListState, setEmployersListState] = useState(employers)
 
     let show;
 
@@ -48,9 +49,9 @@ function Main() {
     } else if (openComponent === 'Order') {
         show = <Order openOrderNumber={openOrderNumber} setOpenComponent={setOpenComponent}/>
     } else if (openComponent === 'Employers') {
-        show = <Employers setOpenComponent={setOpenComponent}/>
+        show = <Employers setOpenComponent={setOpenComponent} employersListState={employersListState} setEmployersListState={setEmployersListState}/>
     } else if (openComponent === 'AddEmployer') {
-        show = <AddEmployer />
+        show = <AddEmployer employersListState={employersListState} setEmployersListState={setEmployersListState} setOpenComponent={setOpenComponent}/>
     }
     
     function asideOpen() {

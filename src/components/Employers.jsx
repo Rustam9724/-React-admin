@@ -1,8 +1,6 @@
-import { employers } from '../components/object';
 import { useState } from 'react';
 
-function Employers({setOpenComponent}) {
-    const [employersState, setEmployersState] = useState(employers);
+function Employers({setOpenComponent, employersListState, setEmployersListState}) {
     const [searchValue, setSearchValue] = useState('');
 
     function editEmployer(event, elem) {
@@ -18,7 +16,7 @@ function Employers({setOpenComponent}) {
             month = `0${month}`
         } 
 
-        setEmployersState(employersState.map(emp => {
+        employersListState(employersListState.map(emp => {
             if (emp.id === elem.id) {
                 return {...emp, name: event.target.value, lastChange: `${day}.${month}.${date.getFullYear()}, ${date.getHours()}:${date.getMinutes()}`};
             } else {
@@ -28,7 +26,7 @@ function Employers({setOpenComponent}) {
     }
 
     function editBlurHandler(elem) {
-        setEmployersState(employersState.map(emp => {
+        setEmployersListState(employersListState.map(emp => {
             if (emp.id === elem.id) {
                 return {...emp, isEdit: false};
             } else {
@@ -44,7 +42,7 @@ function Employers({setOpenComponent}) {
     }
 
     function editClickHandler(elem) {
-        setEmployersState(employersState.map(emp => {
+        setEmployersListState(employersListState.map(emp => {
             if (emp.id === elem.id) {
                 return {...emp, isEdit: true};
             } else {
@@ -54,18 +52,18 @@ function Employers({setOpenComponent}) {
     }
 
     function deleteEmployer(elem) {
-        setEmployersState(employersState.filter(emp => {
+        setEmployersListState(employersListState.filter(emp => {
             return emp.id !== elem.id;
         }))
     }
 
     let employersResult;
     if (searchValue) {
-        employersResult = employersState.filter(emp => {
+        employersResult = employersListState.filter(emp => {
             return emp.name.toLowerCase().indexOf(searchValue.toLowerCase()) >= 0;
         })
     } else {
-        employersResult = employersState;
+        employersResult = employersListState;
     }
 
 
