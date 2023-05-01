@@ -118,35 +118,35 @@ function Employers() {
             </div>
             <div className="employers__main">
                 <div className="employers__main__header">
-                    <div className="employers__main__header__item">
+                    <div className="employers__main__header__section">
                         <p>ИМЯ ФАМИЛИЯ</p>
                         <div>
                             <div></div>
                             <div></div>
                         </div>
                     </div>
-                    <div className="employers__main__header__item">
-                        <p>ДОЛЖНОСТь</p>
+                    <div className="employers__main__header__section">
+                        <p>ДОЛЖНОСТЬ</p>
                         <div>
                             <div></div>
                             <div></div>
                         </div>
                     </div>
-                    <div className="employers__main__header__item">
+                    <div className="employers__main__header__section">
                         <p>EMAIL</p>
                         <div>
                             <div></div>
                             <div></div>
                         </div>
                     </div>
-                    <div className="employers__main__header__item">
+                    <div className="employers__main__header__section">
                         <p>ПОСЛЕДНЕЕ ИЗМЕНЕНИЕ</p>
                         <div>
                             <div></div>
                             <div></div>
                         </div>
                     </div>
-                    <div className="employers__main__header__item">
+                    <div className="employers__main__header__section">
                         <p>ДЕЙСТВИЯ</p>
                         <div>
                             <div></div>
@@ -155,10 +155,10 @@ function Employers() {
                     </div>
                 </div>
             </div>  
-            <div className="employers__main__list__wrapper">
+            <div className="employers__main__list">
                 {employersResult}
                 <div className="employers__main__list__section">
-                <div className="__main__list__section__name">
+                <div className="employers__main__list__section__name">
                     <div>ЖА</div>
                     <p>Edgar Jones</p>
                 </div>
