@@ -1,13 +1,13 @@
 function AddEmployer() {
     return (
         <div className="add-employer">
-            <div className="add-employer-title">
+            <div className="add-employer__title">
                 <div></div>
                 <h2>Добавить сотрудника</h2>
             </div>
             <div className="add-employer__main">
                 <div className="add-employer__main__left">
-                    <div>
+                    <div className="add-employer__section">
                         <label>
                             <p>Имя</p>
                             <input type="text" placeholder="Введите имя"/>
@@ -17,35 +17,39 @@ function AddEmployer() {
                             <input type="text" placeholder="Введите фамилию"/>
                         </label>
                     </div>
-                    <label>
-                        <p>Должность</p>
-                        <select>
-                            <option>Официант</option>
-                            <option>Системный администратор</option>
-                            <option>Научный сотрудник</option>
-                            <option>Оператор</option>
-                        </select>
-                    </label>
-                    <label>
-                        <p>Пароль</p>
-                        <div>
+                    <div className="add-employer__section">
+                        <label>
+                            <p>Должность</p>
+                            <select>
+                                <option>Официант</option>
+                                <option>Системный администратор</option>
+                                <option>Научный сотрудник</option>
+                                <option>Оператор</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div className="add-employer__section">
+                        <label>
+                            <p>Пароль</p>
                             <input type="text" placeholder="Придумайте пароль"/>
-                            <button>Сгенерировать</button>
-                        </div>
-                    </label>
+                        </label>
+                        <button>Сгенерировать</button>
+                    </div>
                 </div>
                 <div className="add-employer__main__right">
-                    <label>
-                        <p>Email</p>
-                        <input type="text" placeholder="Введите e-mail"/>
-                    </label>
-                    <label>
-                        <p>Номер телефона</p>
-                        <input type="phone" placeholder="Введите номер телефона"/>
-                    </label>
-                    <div className="add-employer__main__right">
-                        <button>Отменить</button>
-                        <button>Добавить</button>
+                    <div className="add-employer__section">
+                        <label>
+                            <p>Email</p>
+                            <input type="text" placeholder="Введите e-mail"/>
+                        </label>
+                        <label>
+                            <p>Номер телефона</p>
+                            <input type="phone" placeholder="Введите номер телефона"/>
+                        </label>
+                    </div>
+                    <div className="add-employer__main__right__buttons">
+                        <button className="add-employer__main__right__buttons__cancel-btn">Отменить</button>
+                        <button className="add-employer__main__right__buttons__save-btn">Добавить</button>
                     </div>
                 </div>
             </div>
