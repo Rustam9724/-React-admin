@@ -3,6 +3,12 @@
     font-family: "Inter";
 }
 
+@media (min-width: 712px) and (min-height: 1138px) and (max-width: 1024px) and (max-height: 1368px) {
+    .add-employer {
+        margin-bottom: 850px;
+    }
+}
+
 .add-employer__title {
     width: 29%;
     display: flex;
@@ -11,6 +17,42 @@
     height: 30px;
     margin-bottom: 24px;
     column-gap: 3.8%;
+}
+
+@media (max-width: 1226px) {
+    .add-employer__title {
+        width: 34%;
+    }  
+}
+
+@media (max-width: 850px) {
+    .add-employer__title {
+        width: 39%;
+    }  
+}
+
+@media (max-width: 741px) {
+    .add-employer__title {
+        width: 49%;
+    }  
+}
+
+@media (max-width: 590px) {
+    .add-employer__title {
+        width: 59%;
+    }  
+}
+
+@media (max-width: 490px) {
+    .add-employer__title {
+        width: 74%;
+    }  
+}
+
+@media (max-width: 390px) {
+    .add-employer__title {
+        width: 94%;
+    }  
 }
 
 .add-employer__title div {
@@ -38,8 +80,40 @@
     border-radius: 6px;
 }
 
+@media (max-width: 899px) {
+    .add-employer__main {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 25px;
+    }  
+}
+
 .add-employer__main__left {
     width: 45%;
+}
+
+@media (min-width: 1025px) and (max-width: 1144px) {
+    .add-employer__main__left {
+        width: 50%;
+    }
+}
+
+@media (max-width: 899px) {
+    .add-employer__main__left {
+        width: 65%;
+    }
+}
+
+@media (max-width: 634px) {
+    .add-employer__main__left {
+        width: 80%;
+    }
+}
+
+@media (max-width: 499px) {
+    .add-employer__main__left {
+        width: 95%;
+    }
 }
 
 .add-employer__section {
@@ -79,6 +153,12 @@
     background-color: white;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
+}
+
+@media (max-width: 424px) {
+    .add-employer__section button {
+        font-size: 0.98rem;
+    }
 }
 
 .add-employer__section button:hover {
@@ -127,6 +207,30 @@
     width: 45%;
 }
 
+@media (min-width: 1025px) and (max-width: 1074px) {
+    .add-employer__main__right {
+        width: 49%;
+    }
+}
+
+@media (max-width: 899px) {
+    .add-employer__main__right {
+        width: 65%;
+    }
+}
+
+@media (max-width: 594px) {
+    .add-employer__main__right {
+        width: 75%;
+    }
+}
+
+@media (max-width: 499px) {
+    .add-employer__main__right {
+        width: 95%;
+    }
+}
+
 .add-employer__main__right .add-employer__section{
     margin-bottom: 134px;
 }
@@ -138,6 +242,12 @@
     justify-content: flex-end;
     column-gap: 5.6%;
     margin-left: auto;
+}
+
+@media (max-width: 399px) {
+    .add-employer__main__right__buttons {
+        width: 72%;
+    }
 }
 
 .add-employer__main__right__buttons button {

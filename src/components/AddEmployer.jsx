@@ -128,7 +128,7 @@ function AddEmployer({employersListState, setEmployersListState, setOpenComponen
                         </label>
                         <label>
                             <p>Номер телефона</p>
-                            <input type="tel" placeholder="Введите номер телефона" value={employerPhone} onChange={event => setEmployerPhone(event.target.value)}/>
+                            <input type="tel" placeholder="Введите номер" value={employerPhone} onChange={event => setEmployerPhone(event.target.value)}/>
                         </label>
                     </div>
                     <div className="add-employer__main__right__buttons">
