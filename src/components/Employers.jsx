@@ -1,7 +1,10 @@
 import { useState } from 'react';
+import { FirstStep, SecondStep, ThirdStep } from './Steps';
 
 function Employers({setOpenComponent, employersListState, setEmployersListState}) {
     const [searchValue, setSearchValue] = useState('');
+    const [step, setStep] = useState(1)
+    const [isPopup, setIsPopup] = useState(false);
 
     function editEmployer(event, elem) {
         const date = new Date();
@@ -66,10 +69,7 @@ function Employers({setOpenComponent, employersListState, setEmployersListState}
         employersResult = employersListState;
     }
 
-
-
     employersResult = employersResult.map(elem => {
-
         return (
             <div className="employers__main__list__section" key={elem.id}>
                 <div className="employers__main__list__section__name">
@@ -97,12 +97,44 @@ function Employers({setOpenComponent, employersListState, setEmployersListState}
                     <div onClick={() => deleteEmployer(elem)}></div>
                 </div>
             </div>
-        )
-            
+        )   
     }) 
+
+
+    let stepResult;
+    switch (step) {
+        case 1:
+            stepResult = <FirstStep setStep={setStep}/>;
+            break;
+        case 2: 
+            stepResult = <SecondStep setStep={setStep}/>;
+            break;
+        case 3:
+            stepResult = <ThirdStep />;
+            break;
+        default: stepResult = null;
+    }
+
+    function managerEditClickHandler() {
+        setIsPopup(true);
+    }
 
     return (
         <div className="employers">
+            <div className={`employers__substrate${isPopup && ' active'}`}></div>
+            <div className={`employers__popup ${isPopup && 'active'}`}>
+                <div className="employers__popup__cross">
+                    <div onClick={() => setIsPopup(false)}></div>
+                </div>
+                <div className="employers__popup__steps">
+                    <div className={`steps__first-step ${step === 1 && 'active'}`}></div>
+                    <div className="steps__arrow"></div>
+                    <div className={`steps__second-step ${step === 2 && 'active'}`}></div>
+                    <div className={`steps__arrow ${step === 3 && 'active'}`}></div>
+                    <div className="steps__third-step"></div>
+                </div>
+                {stepResult}
+            </div>
             <h2>Сотрудники</h2>
             <div className="employers__search-and-add">
                 <div className="employers__search-and-add__search">
@@ -166,7 +198,7 @@ function Employers({setOpenComponent, employersListState, setEmployersListState}
                 <div className="employers__main__list__section__email">janet86@hotmail.com</div>
                 <div className="employers__main__list__section__last-change">22.02.2023, 00:00</div>
                 <div className="employers__main__list__section__actions">
-                    <div></div>
+                    <div onClick={managerEditClickHandler}></div>
                 </div>
             </div>
             </div>
