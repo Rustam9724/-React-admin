@@ -4,11 +4,11 @@ function PopularMeels({meelsAndDrinksListState, setMeelsAndDrinksListState}) {
 
     const availableMeelsResult = meelsAndDrinksListState.map(meel => {
         return (
-            <div className="popular-meels__main__section__meel" key={meel.id}>
+            <div className="marketing__main__section__meel" key={meel.id}>
                 <div></div>
                 <p>{meel.name}</p>
+                <input type="checkbox" id={meel.id} hidden/>
                 <label htmlFor={meel.id}></label>
-                <input type="checkbox" id={meel.id}/>
             </div>
         )
     })
@@ -17,7 +17,7 @@ function PopularMeels({meelsAndDrinksListState, setMeelsAndDrinksListState}) {
         return meel.isPopular;
     }).map(meel => {
         return (
-            <div className="popular-meels__main__section__meel" key={meel.id}>
+            <div className="marketing__main__section__meel" key={meel.id}>
                 <div></div>
                 <p>{meel.name}</p>
                 <label htmlFor={meel.id}></label>
@@ -27,32 +27,32 @@ function PopularMeels({meelsAndDrinksListState, setMeelsAndDrinksListState}) {
     })
 
     return (
-        <div className="popular-meels">
+        <div className="marketing">
             <h2>Популярные блюда</h2>
-            <div className="popular-meels__main">
-                <div className="popular-meels__main__section available__meels">
+            <div className="marketing__main">
+                <div className="marketing__main__section available__meels">
                     <h4>Доступные блюда</h4>
-                    <div className="popular-meels__main__section__header">
+                    <div className="marketing__main__section__header">
                         <input type="text" placeholder="Введите блюдо"/>
-                        <div></div>
-                        <div></div>
+                        <div className="marketing__main__section__header__one-arrow"></div>
+                        <div className="marketing__main__section__header__two-arrow"></div>
                     </div>
-                    <div className="popular-meels__main__section__meels">
+                    <div className="marketing__main__section__meels">
                         {availableMeelsResult}
                     </div>
                 </div>
-                <div className="popular-meels__main__section choosed__meels">
+                <div className="marketing__main__section choosed__meels">
                     <h4>Доступные блюда</h4>
-                    <div className="popular-meels__main__section__header">
-                        <div></div>
-                        <div></div>
+                    <div className="marketing__main__section__header">
+                        <div className="marketing__main__section__header__two-arrow"></div>
+                        <div className="marketing__main__section__header__one-arrow"></div>
                         <input type="text" placeholder="Введите блюдо"/>
                     </div>
-                    <div className="popular-meels__main__section__meels">
+                    <div className="marketing__main__section__meels">
                         {choosedMeelsResult}
                     </div>
+                    <button>Сохранить</button>
                 </div>
-                <button>Сохранить</button>
             </div>
         </div>
     )
