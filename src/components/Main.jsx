@@ -13,6 +13,7 @@ import OrdersList from './OrdersList.jsx';
 import Order from './Order.jsx';
 import Employers from './Employers';
 import AddEmployer from './AddEmployer';
+import PopularMeels from './PopularMeels.jsx';
 
 function Main() {
     const [isMenuItemOpen, setIsMenuItemOpen] = useState(false);
@@ -52,6 +53,8 @@ function Main() {
         show = <Employers setOpenComponent={setOpenComponent} employersListState={employersListState} setEmployersListState={setEmployersListState}/>
     } else if (openComponent === 'AddEmployer') {
         show = <AddEmployer employersListState={employersListState} setEmployersListState={setEmployersListState} setOpenComponent={setOpenComponent}/>
+    } else if (openComponent === 'PopularMeels') {
+        show = <PopularMeels meelsAndDrinksListState={meelsAndDrinksListState} setMeelsAndDrinksListState={setMeelsAndDrinksListState} />
     }
     
     function asideOpen() {
@@ -168,7 +171,7 @@ function Main() {
                     {
                         isMarketingItemOpen &&
                             <>
-                                <div className="aside__item aside__item-drop-down">
+                                <div className="aside__item aside__item-drop-down" onClick={() => setOpenComponent('PopularMeels')}>
                                     <div></div>
                                     <p>Популярные блюда</p>
                                 </div>

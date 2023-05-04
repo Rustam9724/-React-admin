@@ -72,15 +72,16 @@ function AddMeel({meelsAndDrinksListState, setMeelsAndDrinksListState, setOpenCo
                 month = `0${month}`
             } 
     
-            const newCategory = {
+            const newMeel = {
                 id: nanoid(),
                 name: meelName,
                 status: activity,
                 lastChange: `${day}.${month}.${date.getFullYear()}, ${date.getHours()}:${date.getMinutes()}`,
                 isNameEdit: false,
-                price: price
+                price: price,
+                isPopular: false,
             }
-            setMeelsAndDrinksListState([...meelsAndDrinksListState, newCategory].sort((a, b) => a.order - b.order));
+            setMeelsAndDrinksListState([...meelsAndDrinksListState, newMeel].sort((a, b) => a.order - b.order));
             setMeelName('');
             setPrice('');
             setQuantity('');

@@ -36,6 +36,7 @@ const meelsAndDrinksList = [
         isNameEdit: false,
         isPriceEdit: false,
         price: 550,
+        isPopular: false,
     },
     {
         id: nanoid(),
@@ -45,6 +46,7 @@ const meelsAndDrinksList = [
         isNameEdit: false,
         isPriceEdit: false,
         price: 550,
+        isPopular: false,
     },
     {
         id: nanoid(),
@@ -54,6 +56,29 @@ const meelsAndDrinksList = [
         isNameEdit: false,
         isPriceEdit: false,
         price: 550,
+        isPopular: false,
+    },
+    
+    {
+        id: nanoid(),
+        name: 'Четвёртое блюдо',
+        status: false,
+        lastChange: '20.01.2023, 00:00',
+        isNameEdit: false,
+        isPriceEdit: false,
+        price: 550,
+        isPopular: false,
+    },
+    
+    {
+        id: nanoid(),
+        name: 'Пятое блюдо',
+        status: false,
+        lastChange: '20.01.2023, 00:00',
+        isNameEdit: false,
+        isPriceEdit: false,
+        price: 550,
+        isPopular: false,
     },
 ]
 
