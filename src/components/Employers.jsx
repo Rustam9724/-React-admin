@@ -130,8 +130,8 @@ function Employers({setOpenComponent, employersListState, setEmployersListState}
                     <div className={`steps__first-step ${step === 1 && 'active'}`}></div>
                     <div className="steps__arrow"></div>
                     <div className={`steps__second-step ${step === 2 && 'active'}`}></div>
-                    <div className={`steps__arrow ${step === 3 && 'active'}`}></div>
-                    <div className="steps__third-step"></div>
+                    <div className="steps__arrow"></div>
+                    <div className={`steps__third-step ${step === 3 && 'active'}`}></div>
                 </div>
                 {stepResult}
             </div>
