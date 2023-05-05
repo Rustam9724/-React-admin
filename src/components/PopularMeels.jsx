@@ -1,30 +1,99 @@
 import { useState } from 'react';
 
 function PopularMeels({meelsAndDrinksListState, setMeelsAndDrinksListState}) {
+    const [avilablesInput, setAvilableInput] = useState('');
+    const [choosedInput, setChoosedInput] = useState('');
+    const [localMeelsAndDrinksListState, setLocalMeelsAndDrinksListState] = useState([...meelsAndDrinksListState]);
+    const [checkedeMeels, setCheckedMeels] = useState([]);
 
-    const availableMeelsResult = meelsAndDrinksListState.map(meel => {
-        return (
-            <div className="marketing__main__section__meel" key={meel.id}>
-                <div></div>
-                <p>{meel.name}</p>
-                <input type="checkbox" id={meel.id} hidden/>
-                <label htmlFor={meel.id}></label>
-            </div>
-        )
+    function checkboxHandler(event, meel) {
+        if (!event.target.value === false) {
+            if (!checkedeMeels.includes(meel.id)) {
+                setCheckedMeels([...checkedeMeels, meel.id])
+            } else {
+                setCheckedMeels([checkedeMeels.splice(checkedeMeels.findIndex((item => item === meel.id)), 1)]);
+            }
+        }
+    }
+
+    function addFirstMeelToChosed() {
+        let newArr = [...localMeelsAndDrinksListState];
+        newArr.filter(elem => ! elem.isPopular)[0].isPopular = true;
+        setLocalMeelsAndDrinksListState(newArr);
+        setCheckedMeels([])
+    }
+
+    function addToChosed() {
+        setLocalMeelsAndDrinksListState(localMeelsAndDrinksListState.map(meel => {
+            if (checkedeMeels.includes(meel.id)) {
+                return {...meel, isPopular: true};
+            } else {
+                return meel;
+            }
+        }))
+        setCheckedMeels([]);
+    }
+
+    let availableMeelsResult;
+    if (avilablesInput) {
+        availableMeelsResult = localMeelsAndDrinksListState.filter(ctg => {
+            return ctg.name.toLowerCase().indexOf(avilablesInput.toLowerCase()) >= 0;
+        })
+    } else {
+        availableMeelsResult = localMeelsAndDrinksListState;
+    }
+
+    availableMeelsResult = availableMeelsResult.map(meel => {
+        if (!meel.isPopular) {
+            return (
+                <div className="marketing__main__section__meel" key={meel.id}>
+                    <div></div>
+                    <p>{meel.name}</p>
+                    <input type="checkbox" id={meel.id} hidden checked={checkedeMeels.includes(meel.id)} onChange={event => checkboxHandler(event, meel)}/>
+                    <label htmlFor={meel.id}></label>
+                </div>
+            )
+        } else {
+            return null;
+        }
     })
+
+    function deleteFirstMeelFromChosed() {
+        let newArr = [...localMeelsAndDrinksListState];
+        newArr.filter(elem => elem.isPopular)[0].isPopular = false;
+        setLocalMeelsAndDrinksListState(newArr);
+    }
+
+    function deletFromChosed() {
+        setLocalMeelsAndDrinksListState(localMeelsAndDrinksListState.map(meel => {
+            if (checkedeMeels.includes(meel.id)) {
+                return {...meel, isPopular: false};
+            } else {
+                return meel;
+            }
+        }))
+        setCheckedMeels([]);
+    }
     
-    const choosedMeelsResult = meelsAndDrinksListState.filter(meel => {
-        return meel.isPopular;
-    }).map(meel => {
-        return (
-            <div className="marketing__main__section__meel" key={meel.id}>
-                <div></div>
-                <p>{meel.name}</p>
-                <label htmlFor={meel.id}></label>
-                <input type="checkbox" id={meel.id}/>
-            </div>
-        )
+    const choosedMeelsResult = localMeelsAndDrinksListState.map(meel => {
+        if (meel.isPopular) {
+            return (
+                <div className="marketing__main__section__meel" key={meel.id}>
+                    <div></div>
+                    <p>{meel.name}</p>
+                    <input type="checkbox" hidden id={meel.id} checked={checkedeMeels.includes(meel.id)} onChange={event => checkboxHandler(event, meel)}/>
+                    <label htmlFor={meel.id}></label>
+                </div>
+            )
+        } else {
+            return null;
+        }
     })
+
+    function saveBtnHandler() {
+        setMeelsAndDrinksListState(localMeelsAndDrinksListState);
+        setCheckedMeels([]);
+    }
 
     return (
         <div className="marketing">
@@ -33,25 +102,25 @@ function PopularMeels({meelsAndDrinksListState, setMeelsAndDrinksListState}) {
                 <div className="marketing__main__section available__meels">
                     <h4>Доступные блюда</h4>
                     <div className="marketing__main__section__header">
-                        <input type="text" placeholder="Введите блюдо"/>
-                        <div className="marketing__main__section__header__one-arrow"></div>
-                        <div className="marketing__main__section__header__two-arrow"></div>
+                        <input type="text" placeholder="Введите блюдо" value={avilablesInput} onChange={event => setAvilableInput(event.target.value)}/>
+                        <div className="marketing__main__section__header__one-arrow" onClick={addFirstMeelToChosed}></div>
+                        <div className="marketing__main__section__header__two-arrow" onClick={addToChosed}></div>
                     </div>
                     <div className="marketing__main__section__meels">
                         {availableMeelsResult}
                     </div>
                 </div>
                 <div className="marketing__main__section choosed__meels">
-                    <h4>Доступные блюда</h4>
+                    <h4>Выбранные блюда</h4>
                     <div className="marketing__main__section__header">
-                        <div className="marketing__main__section__header__two-arrow"></div>
-                        <div className="marketing__main__section__header__one-arrow"></div>
-                        <input type="text" placeholder="Введите блюдо"/>
+                        <div className="marketing__main__section__header__two-arrow" onClick={deletFromChosed}></div>
+                        <div className="marketing__main__section__header__one-arrow" onClick={deleteFirstMeelFromChosed}></div>
+                        <input type="text" placeholder="Введите блюдо" value={choosedInput} onChange={event => setChoosedInput(event.target.value)}/>
                     </div>
                     <div className="marketing__main__section__meels">
                         {choosedMeelsResult}
                     </div>
-                    <button>Сохранить</button>
+                    <button onClick={saveBtnHandler}>Сохранить</button>
                 </div>
             </div>
         </div>
