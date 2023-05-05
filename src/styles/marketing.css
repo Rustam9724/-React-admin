@@ -3,6 +3,12 @@
     margin-bottom: 520px;
 }
 
+@media (min-width: 712px) and (min-height: 1138px) and (max-width: 1024px) and (max-height: 1368px) {
+    .marketing {
+        margin-bottom: 800px;
+    }
+}
+
 .marketing h2 {
     font-family: "Inter";
     font-weight: 600;

@@ -80,6 +80,7 @@ function AddMeel({meelsAndDrinksListState, setMeelsAndDrinksListState, setOpenCo
                 isNameEdit: false,
                 price: price,
                 isPopular: false,
+                isChoosed: false,
             }
             setMeelsAndDrinksListState([...meelsAndDrinksListState, newMeel].sort((a, b) => a.order - b.order));
             setMeelName('');

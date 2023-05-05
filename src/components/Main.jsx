@@ -14,6 +14,7 @@ import Order from './Order.jsx';
 import Employers from './Employers';
 import AddEmployer from './AddEmployer';
 import PopularMeels from './PopularMeels.jsx';
+import AddToOrder from './AddToOrder.jsx';
 
 function Main() {
     const [isMenuItemOpen, setIsMenuItemOpen] = useState(false);
@@ -55,6 +56,8 @@ function Main() {
         show = <AddEmployer employersListState={employersListState} setEmployersListState={setEmployersListState} setOpenComponent={setOpenComponent}/>
     } else if (openComponent === 'PopularMeels') {
         show = <PopularMeels meelsAndDrinksListState={meelsAndDrinksListState} setMeelsAndDrinksListState={setMeelsAndDrinksListState} />
+    } else if (openComponent === 'AddToOrder') {
+        show = <AddToOrder meelsAndDrinksListState={meelsAndDrinksListState} setMeelsAndDrinksListState={setMeelsAndDrinksListState}/>
     }
     
     function asideOpen() {
@@ -175,7 +178,7 @@ function Main() {
                                     <div></div>
                                     <p>Популярные блюда</p>
                                 </div>
-                                <div className="aside__item aside__item-drop-down">
+                                <div className="aside__item aside__item-drop-down" onClick={() => setOpenComponent('AddToOrder')}>
                                     <div></div>
                                     <p>Добавить к заказу</p>
                                 </div>

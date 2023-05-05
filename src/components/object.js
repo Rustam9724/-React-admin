@@ -37,6 +37,7 @@ const meelsAndDrinksList = [
         isPriceEdit: false,
         price: 550,
         isPopular: false,
+        isChoosed: false,
     },
     {
         id: nanoid(),
@@ -47,6 +48,7 @@ const meelsAndDrinksList = [
         isPriceEdit: false,
         price: 550,
         isPopular: false,
+        isChoosed: false,
     },
     {
         id: nanoid(),
@@ -57,6 +59,7 @@ const meelsAndDrinksList = [
         isPriceEdit: false,
         price: 550,
         isPopular: false,
+        isChoosed: false,
     },
     
     {
@@ -68,6 +71,7 @@ const meelsAndDrinksList = [
         isPriceEdit: false,
         price: 550,
         isPopular: false,
+        isChoosed: false,
     },
     
     {
@@ -79,6 +83,7 @@ const meelsAndDrinksList = [
         isPriceEdit: false,
         price: 550,
         isPopular: false,
+        isChoosed: false,
     },
 ]
 
