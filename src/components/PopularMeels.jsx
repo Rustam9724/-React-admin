@@ -36,8 +36,8 @@ function PopularMeels({meelsAndDrinksListState, setMeelsAndDrinksListState}) {
 
     let availableMeelsResult;
     if (avilablesInput) {
-        availableMeelsResult = localMeelsAndDrinksListState.filter(ctg => {
-            return ctg.name.toLowerCase().indexOf(avilablesInput.toLowerCase()) >= 0;
+        availableMeelsResult = localMeelsAndDrinksListState.filter(meel => {
+            return meel.name.toLowerCase().indexOf(avilablesInput.toLowerCase()) >= 0;
         })
     } else {
         availableMeelsResult = localMeelsAndDrinksListState;
@@ -75,7 +75,16 @@ function PopularMeels({meelsAndDrinksListState, setMeelsAndDrinksListState}) {
         setCheckedMeels([]);
     }
     
-    const choosedMeelsResult = localMeelsAndDrinksListState.map(meel => {
+    let choosedMeelsResult;
+    if (choosedInput) {
+        choosedMeelsResult = localMeelsAndDrinksListState.filter(meel => {
+            return meel.name.toLowerCase().indexOf(choosedInput.toLowerCase()) >= 0;
+        })
+    } else {
+        choosedMeelsResult = localMeelsAndDrinksListState;
+    }
+
+    choosedMeelsResult = choosedMeelsResult.map(meel => {
         if (meel.isPopular) {
             return (
                 <div className="marketing__main__section__meel" key={meel.id}>
@@ -102,7 +111,7 @@ function PopularMeels({meelsAndDrinksListState, setMeelsAndDrinksListState}) {
                 <div className="marketing__main__section available__meels">
                     <h4>Доступные блюда</h4>
                     <div className="marketing__main__section__header">
-                        <input type="text" placeholder="Введите блюдо" value={avilablesInput} onChange={event => setAvilableInput(event.target.value)}/>
+                        <input type="text" placeholder="Поиск" value={avilablesInput} onChange={event => setAvilableInput(event.target.value)}/>
                         <div className="marketing__main__section__header__one-arrow" onClick={addFirstMeelToChosed}></div>
                         <div className="marketing__main__section__header__two-arrow" onClick={addToChosed}></div>
                     </div>
@@ -115,7 +124,7 @@ function PopularMeels({meelsAndDrinksListState, setMeelsAndDrinksListState}) {
                     <div className="marketing__main__section__header">
                         <div className="marketing__main__section__header__two-arrow" onClick={deletFromChosed}></div>
                         <div className="marketing__main__section__header__one-arrow" onClick={deleteFirstMeelFromChosed}></div>
-                        <input type="text" placeholder="Введите блюдо" value={choosedInput} onChange={event => setChoosedInput(event.target.value)}/>
+                        <input type="text" placeholder="Поиск" value={choosedInput} onChange={event => setChoosedInput(event.target.value)}/>
                     </div>
                     <div className="marketing__main__section__meels">
                         {choosedMeelsResult}
