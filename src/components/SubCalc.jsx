@@ -45,8 +45,11 @@ function SubCalc() {
     
     return (
         <div className="sub-calc">
-            <div className={`sub-calc__substrate ${isPopup ? 'active' : null}`} onClick={() => setIsPopup(false)}></div>
-            <div className={`sub-calc__popup ${isPopup ? 'active' : null}`}>
+            <div className={`sub-calc__substrate ${isPopup ? 'active' : null}`}></div>
+            <div className={`modal-subscription ${isPopup ? 'active' : null}`}>
+                <div className="modal-subscription__cross" onClick={() => setIsPopup(false)}>
+                    <div></div>
+                </div>
                 <h4>Заказ услуг</h4>
                 <label>
                     <p>Услуги{!isServiceValid && <span>*</span>}</p>
