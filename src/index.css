@@ -17,6 +17,7 @@
 @import './styles/add-employer.css';
 @import './styles/marketing.css';
 @import './styles/sub-calc.css';
+@import './styles/list-of-services.css';
 
 *, ul, p, h1, h2, h3, h4, button, body, input, ::before, ::after, div {
   padding: 0;
