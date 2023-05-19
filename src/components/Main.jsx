@@ -16,6 +16,7 @@ import AddEmployer from './AddEmployer';
 import PopularMeels from './PopularMeels.jsx';
 import AddToOrder from './AddToOrder.jsx';
 import SubCalc from './SubCalc.jsx';
+import ListOfServices from './ListOfServices.jsx';
 
 function Main() {
     const [isMenuItemOpen, setIsMenuItemOpen] = useState(false);
@@ -61,6 +62,8 @@ function Main() {
         show = <AddToOrder meelsAndDrinksListState={meelsAndDrinksListState} setMeelsAndDrinksListState={setMeelsAndDrinksListState}/>
     } else if (openComponent === 'SubCalc') {
         show = <SubCalc />
+    } else if (openComponent === 'ListOfServices') {
+        show = <ListOfServices />
     }
     
     function asideOpen() {
@@ -235,7 +238,7 @@ function Main() {
                                     <div></div>
                                     <p>Калькулятор подписки</p>
                                 </div>
-                                <div className="aside__item aside__item-drop-down">
+                                <div className="aside__item aside__item-drop-down" onClick={() => setOpenComponent('ListOfServices')}>
                                     <div></div>
                                     <p>Список услуг</p>
                                 </div>
