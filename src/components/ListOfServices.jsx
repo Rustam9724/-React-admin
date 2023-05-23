@@ -41,13 +41,13 @@ function ListOfServices() {
     let result = [];
     for (let i = 1; i <= 6; i++) {
         result.push(
-            <div className="list-of-services__main__service-card service-card" key={i} onClick={() => setIsPopup(true)}>
+            <div className="list-of-services__main__service-card service-card" key={i}>
                 <div className="service-card__image"></div>
                 <div className="service-card__main">
                     <h4>Card Title</h4>
                     <p>Some quick example text to build on the card title and make up the bulk of the card's content. card title and make up the bulk of the card's content.</p>
                     <div className="service-card__order-block">
-                            <button>Заказать</button>
+                            <button onClick={() => setIsPopup(true)}>Заказать</button>
                             <p>1234 руб</p>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ function ListOfServices() {
     
     return (
         <div className="list-of-services">
-            <div className={`modal-subscription__substrate ${isPopup ? 'active' : null}`} onClick={() => setIsPopup(false)}></div>
+            <div className={`list-of-services__substrate ${isPopup ? 'active' : null}`}></div>
             <div className={`modal-subscription ${isPopup ? 'active' : null}`}>
             <div className="modal-subscription__cross" onClick={() => setIsPopup(false)}>
                     <div></div>

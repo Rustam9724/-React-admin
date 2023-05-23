@@ -17,6 +17,7 @@ import PopularMeels from './PopularMeels.jsx';
 import AddToOrder from './AddToOrder.jsx';
 import SubCalc from './SubCalc.jsx';
 import ListOfServices from './ListOfServices.jsx';
+import OrderStatistics from './OrderStatistics.jsx';
 
 function Main() {
     const [isMenuItemOpen, setIsMenuItemOpen] = useState(false);
@@ -64,6 +65,8 @@ function Main() {
         show = <SubCalc />
     } else if (openComponent === 'ListOfServices') {
         show = <ListOfServices />
+    } else if (openComponent === 'OrderStatistics') {
+        show = <OrderStatistics />;
     }
     
     function asideOpen() {
@@ -198,7 +201,7 @@ function Main() {
                 {
                         isStatisticsItemOpen &&
                             <>
-                                <div className="aside__item aside__item-drop-down">
+                                <div className="aside__item aside__item-drop-down" onClick={() => setOpenComponent('OrderStatistics')}>
                                     <div></div>
                                     <p>Заказы</p>
                                 </div>

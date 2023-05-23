@@ -43,7 +43,7 @@ function OrdersList({setOpenComponent, setOpenOrderNumber}) {
             <div className="orders-list__main__list__order" key={order.id} onClick={() => orderClickHandler(order)}>
                 <div className="orders-list__main__list__order__number">{order.number}</div>
                 <div className="orders-list__main__list__order__table">{order.table}</div>
-                <div className="orders-list__main__list__order__cost">{order.cost}</div>
+                <div className="orders-list__main__list__order__cost">10</div>
                 <div className="orders-list__main__list__order__status">
                     <p className={order.status}>{status}</p>
                 </div>

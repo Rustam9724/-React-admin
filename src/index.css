@@ -18,6 +18,7 @@
 @import './styles/marketing.css';
 @import './styles/sub-calc.css';
 @import './styles/list-of-services.css';
+@import './styles/statistics.css';
 
 *, ul, p, h1, h2, h3, h4, button, body, input, ::before, ::after, div {
   padding: 0;
@@ -147,6 +148,10 @@ html, body {
   cursor: pointer;
 }
 
+.list-of-services .modal-subscription button {
+  margin-left: 7%;
+}
+
 .modal-subscription button:hover {
   background-color: #C24624;
 }
@@ -176,8 +181,14 @@ html, body {
   align-items: center;
   cursor: pointer;
   margin-left: auto;
-  margin-right: -40px;
+  margin-right: -9%;
   margin-top: -40px;
+}
+
+@media (max-width: 600px) {
+  .modal-subscription__cross {
+    margin-right: -6%;
+  }
 }
 
 .modal-subscription__cross div {
