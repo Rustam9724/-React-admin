@@ -40,6 +40,10 @@
     margin-bottom: 4px;
 }
 
+.institution__main__section label p span {
+    color: red;
+}
+
 .institution__main__section label input,
 .institution__main__section label select {
     width: 100%;
@@ -47,6 +51,10 @@
     padding-left: 1.9%;
     border: 1px solid #DBDADE;
     border-radius: 4px;
+}
+
+.institution__main__section label input.invalid {
+    border: 1px solid red;
 }
 
 .institution__main__section textarea {

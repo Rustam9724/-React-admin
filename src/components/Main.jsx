@@ -35,6 +35,7 @@ function Main() {
     const [waitersState, setWaitersState] = useState(waiters);
     const [openOrderNumber, setOpenOrderNumber] = useState(null);
     const [employersListState, setEmployersListState] = useState(employers)
+    const [restName, setRestName] = useState('Название ресторана')
 
     let show;
 
@@ -75,7 +76,7 @@ function Main() {
     } else if (openComponent === 'CategoriesStatistics') {
         show = <CategoriesStatistics />
     } else if (openComponent === 'Institution') {
-        show = <Institution />
+        show = <Institution setRestName={setRestName}/>
     }
     
     function asideOpen() {
@@ -269,11 +270,9 @@ function Main() {
                             <div></div>
                             <div></div>
                         </div>
-                        <select>
-                            <option>Ресторан</option>
-                            <option>Ресторан 2</option>
-                            <option>Ресторан 3</option>
-                        </select>
+                        <div className="main__header__left__rest-name">
+                            {restName}
+                        </div>
                     </div>
                     <div className="main__header__right">
                         <div className="main__header__price">

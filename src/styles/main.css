@@ -150,7 +150,7 @@
 }
 
 .main__header__left {
-    width: 22%; /*290px*/
+    width: 22%;
     height: 35px;
     display: flex;
     align-items: center;
@@ -206,18 +206,16 @@
     opacity: 0.8;
 }
 
-.main__header select {
-    width: 100%; /*250px*/
-    height: 35px;
-    border: 1px solid #DBDADE;
-    border-radius: 4px;
-    padding: 0.64vh 0.88%;
+.main__header__left__rest-name {
     font-family: "Inter";
     font-weight: 400;
     font-size: 1.3rem;
     line-height: 162%;
     color: #4B465C;
-    /* z-index: 2; */
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 136%;
+    opacity: 0.9;
 }
 
 @media (max-width: 1024px) {
