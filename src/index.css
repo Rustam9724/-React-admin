@@ -19,6 +19,7 @@
 @import './styles/sub-calc.css';
 @import './styles/list-of-services.css';
 @import './styles/statistics.css';
+@import './styles/institutions.css';
 
 *, ul, p, h1, h2, h3, h4, button, body, input, ::before, ::after, div {
   padding: 0;

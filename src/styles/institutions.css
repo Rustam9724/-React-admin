@@ -1,0 +1,75 @@
+.institution {
+    font-family: Inter;
+    margin-bottom: 400px;
+}
+
+.institution h2 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 136%;
+    color: #4B465C;
+    opacity: 0.9;
+    margin-bottom: 24px;
+}
+
+.institution__main {
+    background-color: white;
+    border-radius: 6px;
+    padding: 24px 2.1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.institution__main__section {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+
+.institution__main__section label {
+    width: 100%;
+}
+
+.institution__main__section label p {
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 118%;
+    color: #4B465C;
+    opacity: 0.9;
+    margin-bottom: 4px;
+}
+
+.institution__main__section label input,
+.institution__main__section label select {
+    width: 100%;
+    height: 35px;
+    padding-left: 1.9%;
+    border: 1px solid #DBDADE;
+    border-radius: 4px;
+}
+
+.institution__main__section textarea {
+    width: 100%;
+    height: 145px;
+    border: 1px solid #DBDADE;
+    border-radius: 4px;
+    padding: 7px 1.9%;
+}
+
+.institution button {
+    width: 24%;
+    height: 38px;
+    border-radius: 6px;
+    background-color: #FF9F43;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 117%;
+    color: white;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.institution button:hover {
+    background-color: #C24624;
+}

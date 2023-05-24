@@ -1,12 +1,12 @@
 function Institution() {
     return (
         <div className="institution">
-            <h1>Заведение</h1>
+            <h2>Заведение</h2>
             <div className="institution__main">
-                <div className="institution__main__left">
+                <div className="institution__main__section institution__main__section__left">
                     <label>
                         <p>Название заведения</p>
-                        <input type="text" placehholder="Введите название"/>
+                        <input type="text" placeholder="Введите название"/>
                     </label>
                     <label>
                         <p>Внутреннее название заведения</p>
@@ -21,7 +21,7 @@ function Institution() {
                         <textarea placeholder="Введите описание"></textarea>
                     </label>
                 </div>
-                <div className="institution__main__right">
+                <div className="institution__main__section institution__main__section__right">
                     <label>
                         <p>Выбор темы</p>
                         <select>
