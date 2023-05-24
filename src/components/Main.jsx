@@ -35,7 +35,7 @@ function Main() {
     const [waitersState, setWaitersState] = useState(waiters);
     const [openOrderNumber, setOpenOrderNumber] = useState(null);
     const [employersListState, setEmployersListState] = useState(employers)
-    const [restName, setRestName] = useState('Название ресторана')
+    const [restName, setRestName] = useState('Ресторан')
 
     let show;
 
