@@ -20,6 +20,7 @@ import ListOfServices from './ListOfServices.jsx';
 import OrderStatistics from './OrderStatistics.jsx';
 import MeelsStatistics from './MeelsStatistics.jsx';
 import CategoriesStatistics from './CategoriesStatistics.jsx';
+import Institution from './Institution.jsx';
 
 function Main() {
     const [isMenuItemOpen, setIsMenuItemOpen] = useState(false);
@@ -73,6 +74,8 @@ function Main() {
         show = <MeelsStatistics />
     } else if (openComponent === 'CategoriesStatistics') {
         show = <CategoriesStatistics />
+    } else if (openComponent === 'Institution') {
+        show = <Institution />
     }
     
     function asideOpen() {
@@ -229,7 +232,7 @@ function Main() {
                 {
                     isSettingsItemOpen &&
                         <>
-                            <div className="aside__item aside__item-drop-down">
+                            <div className="aside__item aside__item-drop-down" onClick={() => setOpenComponent("Institution")}>
                                 <div></div>
                                 <p>Заведение</p>
                             </div>
