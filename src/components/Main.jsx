@@ -19,6 +19,7 @@ import SubCalc from './SubCalc.jsx';
 import ListOfServices from './ListOfServices.jsx';
 import OrderStatistics from './OrderStatistics.jsx';
 import MeelsStatistics from './MeelsStatistics.jsx';
+import CategoriesStatistics from './CategoriesStatistics.jsx';
 
 function Main() {
     const [isMenuItemOpen, setIsMenuItemOpen] = useState(false);
@@ -70,6 +71,8 @@ function Main() {
         show = <OrderStatistics />;
     } else if (openComponent === 'MeelsStatistics') {
         show = <MeelsStatistics />
+    } else if (openComponent === 'CategoriesStatistics') {
+        show = <CategoriesStatistics />
     }
     
     function asideOpen() {
@@ -212,7 +215,7 @@ function Main() {
                                     <div></div>
                                     <p>Блюда</p>
                                 </div>
-                                <div className="aside__item aside__item-drop-down">
+                                <div className="aside__item aside__item-drop-down" onClick={() => setOpenComponent('CategoriesStatistics')}>
                                     <div></div>
                                     <p>Категории</p>
                                 </div>

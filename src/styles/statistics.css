@@ -582,5 +582,135 @@
     .statistics__info__list__meel__section:last-child {
         font-size: 0.83rem;
     }
+}
 
+.statistics__category__info__header {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    font-size: 1.3rem;
+    line-height: 118%;
+    color: #4B465C;
+    font-weight: 600;
+    opacity: 0.9;
+    border-radius: 6px 6px 0 0;
+}
+
+.statistics__category__info__header__section {
+    width: 24%;
+    padding-left: 1.77%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.statistics__category__info__header__section:first-child {
+    width: 27%;
+}
+
+.statistics__category__info__header__section p {
+    flex-grow: 1;
+    color: #4B465C;
+    opacity: 0.9;
+}
+
+.statistics__category__info__header__section > div {
+    width: 18px;
+    height: 36px;
+}
+
+.statistics__category__info__header__section > div div {
+    width: 18px;
+    height: 18px;
+}
+
+.statistics__category__info__header__section > div div:first-child {
+    background-image: url("../assets/fi_chevron-up.png");
+}
+
+.statistics__category__info__header__section > div div:nth-child(2) {
+    background-image: url("../assets/chevron-down.png");
+}
+
+.statistics__category__info__header__section {
+    height: 58px;
+    border-top: 1px solid #DBDADE;
+    display: flex;
+    align-items: center;
+    color: #4B465C;
+}
+
+.statistics__info__list__category__section {
+    height: 58px;
+    border-top: 1px solid #DBDADE;
+    color: #4B465C;
+    align-items: center;
+    display: flex;
+}
+
+.statistics__info__list__category__section:first-child {
+    width: 27%;
+    display: flex;
+    align-items: center;
+    column-gap: 0.88%;
+    padding-left: 1.77%;
+}
+
+.statistics__info__list__category__section:first-child div {
+    width: 38px;
+    height: 38px;
+    background-image: url("../assets/Rectangle\ 1.png");
+    background-size: cover;
+}
+
+.statistics__info__list__category__section:first-child p {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 147%;
+    opacity: 0.8;
+}
+
+.statistics__info__list__category__section:nth-child(2) {
+    width: 24%;
+    padding-left: 1.77%;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 147%;
+    opacity: 0.8;
+}
+
+.statistics__info__list__category__section:nth-child(3) {
+    width: 24%;
+    padding-left: 1.77%;
+    font-size: 1.3rem;
+    line-height: 108%;
+    opacity: 0.8;
+}
+
+.statistics__info__list__category__section:nth-child(3) p {
+    font-weight: 600;
+    padding: 5px 4.2%;
+    width: max-content;
+}
+
+.statistics__info__list__category__section:nth-child(3) .active {
+    background-color: rgba(40, 199, 111, 0.16);
+    color: #28C76F;
+}
+
+.statistics__info__list__category__section:nth-child(3) .passive {
+    background: rgba(60, 76, 109, 0.16);
+    color: #A8AAAE;
+}
+
+.statistics__info__list__category__section:last-child {
+    width: 24%;
+    padding-left: 1.77%;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 147%;
+    opacity: 0.8;
+    padding-left: 2.5%;
 }

@@ -453,3 +453,7 @@
 .categories__main__list__section__actions div:nth-child(2) {
     background-image: url("../assets/trash.png");
 }
+
+.statistics__info__list__category {
+    display: flex;
+}
