@@ -2,12 +2,13 @@ function Support() {
 
     function openFAQ(event) {
         event.target.closest('div.support__faq').childNodes[1].classList.toggle('view');
+        event.target.closest('div.support__faq').childNodes[0].childNodes[1].classList.toggle('down');
     }
 
     let faqResult = [];
     for(let i = 1; i <= 9; i++) {
         faqResult.push(
-            <div className="support__faq" key={i} onClick={event => event.target.closest('div.support__faq').childNodes[1].classList.toggle('view')}>
+            <div className="support__faq" key={i} onClick={event => openFAQ(event)}>
                 <div className="support__faq__header">
                     <h4>Accordion Item #{i}</h4>
                     <div></div>

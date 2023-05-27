@@ -64,6 +64,10 @@
     background-image: url("../assets/support__arrow-right.png");
 }
 
+.support__faq__header div.down {
+    transform: rotate(90deg);
+}
+
 .support__faq p {
     font-weight: 400;
     font-size: 1.5rem;
