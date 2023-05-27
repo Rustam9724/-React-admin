@@ -42,6 +42,7 @@
     padding: 0 3.5%;
     box-shadow: 0px 2px 4px rgba(165, 163, 174, 0.3);
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .support__faq__header {
@@ -61,7 +62,6 @@
     width: 20px;
     height: 20px;
     background-image: url("../assets/support__arrow-right.png");
-    cursor: pointer;
 }
 
 .support__faq p {
@@ -71,6 +71,10 @@
     opacity: 0.8;
     padding: 0 0 12.5px;
     display: none;
+}
+
+.support__faq p.view {
+    display: block;
 }
 
 .support__main__section:last-child {
