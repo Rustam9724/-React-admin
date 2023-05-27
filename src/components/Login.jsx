@@ -1,6 +1,30 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from 'react';
 
 function Login() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [isEmailValid, setIsEmailValid] = useState(true);
+    const [isPasswordValid, setIsPasswordValid] = useState(true);
+    const navigate = useNavigate();
+
+    function enter() {
+        setIsEmailValid(true);
+        setIsPasswordValid(true);
+
+        if (email !== 'manager') {
+            setIsEmailValid(false);
+        }
+
+        if (password !== '12345678') {
+            setIsPasswordValid(false);
+        }
+
+        if (email === 'manager'  && password === '12345678') {
+            navigate('/main')
+        }
+    }
+
     return (
         <div className="login-section">
             <svg width="239" height="234" viewBox="0 0 239 234" fill="none" xmlns="http://www.w3.org/2000/svg" className="top-shape">
@@ -16,19 +40,30 @@ function Login() {
                     <p>Пожалуйста, войдите в свою учётную запись</p>
                  </div>
                  <label>
-                    <p>Email</p>
-                    <input type="email" placeholder="Введите 'manager'"/>
+                    <p>Email {!isEmailValid && <span>*</span>}</p>
+                    <input 
+                        type="email" 
+                        placeholder="Введите 'manager'" 
+                        value={email} 
+                        onChange={event => setEmail(event.target.value)} 
+                        className={!isEmailValid ? 'invalid' : null}
+                    />
                  </label>
                  <div className="password-section">
                     <label>
-                        <p>Пароль</p>
-                        <input type="password" className="password" placeholder="Введите 12345678"/>
+                        <p>Пароль {!isPasswordValid && <span>*</span>}</p>
+                        <input 
+                            type="password" 
+                            className="password" 
+                            placeholder="Введите 12345678" 
+                            value={password} 
+                            onChange={event => setPassword(event.target.value)}
+                            className={!isPasswordValid ? 'invalid' : null}
+                        />
                     </label>
                  <Link to="/reset-password" className="password-forgotten">Забыли пароль?</Link>
                  </div>
-                 <button>
-                    <Link to="/main">Войти</Link>
-                </button>
+                 <button onClick={enter}>Войти</button>
                  <div className="no-account"><p>Нет аккаунта?</p> <Link className="get-register" to="/register">Зарегестрироваться</Link></div>
             </div>  
             <svg width="181" height="181" viewBox="0 0 181 181" fill="none" xmlns="http://www.w3.org/2000/svg" className="bottom-shape">

@@ -1,5 +1,5 @@
 .login-section {
-    width: 38%; /*547 px*/
+    width: 38%;
     margin: 14vh auto;
     position: relative;
     padding-top: 15vh;
@@ -19,25 +19,25 @@
 
 @media (max-width: 1024px) {
     .login-section {
-        width: 59%; /*604px*/
+        width: 59%;
     }
 }
 
 @media (max-width: 824px) {
     .login-section {
-        width: 70%; /*604px*/
+        width: 70%;
     }
 }
 
 @media (max-width: 696px) {
     .login-section {
-        width: 86%; /*604px*/
+        width: 86%;
     }
 }
 
 @media (max-width: 565px) {
     .login-section {
-        width: 95%; /*604px*/
+        width: 95%;
     }
 }
 
@@ -65,7 +65,7 @@
 
 .login-form {
     position: relative;
-    width: 82%; /*450px*/;
+    width: 82%;
     padding: 32px;
     background-color: white;
     z-index: 10;
@@ -150,6 +150,10 @@
     margin-bottom: 0.37vh;
 }
 
+.login-form label p span {
+    color: red;
+}
+
 .login-form label input {
     height: 3.5vh;
     width: 100%;
@@ -157,6 +161,10 @@
     margin-bottom: 1.48vh;
     outline: 1px solid #DBDADE;
     border-radius: 6px;
+}
+
+.login-form label input.invalid {
+    outline-color: red;
 }
 
 .login-form button {
