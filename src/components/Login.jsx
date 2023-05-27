@@ -17,16 +17,18 @@ function Login() {
                  </div>
                  <label>
                     <p>Email</p>
-                    <input type="email" placeholder="john.doe"/>
+                    <input type="email" placeholder="Введите 'manager'"/>
                  </label>
                  <div className="password-section">
                     <label>
                         <p>Пароль</p>
-                        <input type="password" className="password"/>
+                        <input type="password" className="password" placeholder="Введите 12345678"/>
                     </label>
                  <Link to="/reset-password" className="password-forgotten">Забыли пароль?</Link>
                  </div>
-                 <button><Link to="/main">Войти</Link></button>
+                 <button>
+                    <Link to="/main">Войти</Link>
+                </button>
                  <div className="no-account"><p>Нет аккаунта?</p> <Link className="get-register" to="/register">Зарегестрироваться</Link></div>
             </div>  
             <svg width="181" height="181" viewBox="0 0 181 181" fill="none" xmlns="http://www.w3.org/2000/svg" className="bottom-shape">
