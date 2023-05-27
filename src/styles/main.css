@@ -45,6 +45,26 @@
     background-color: rgba(75, 70, 92, 0.04);
 }
 
+.aside__item.selected {
+    background: linear-gradient(45deg, #FF9F43 0%, #FFB976 100%);
+    box-shadow: 0px 2px 6px rgba(115, 103, 240, 0.48);
+    border-radius: 6px;
+}
+
+.aside__item.selected p {
+    color: white;
+}
+
+.aside__item.selected svg path,
+.aside__item.selected svg ellipse,
+.aside__item.selected svg circle {
+    stroke: white;
+}
+
+.aside__item.selected:hover {
+    background: linear-gradient(45deg, #FF9F43 0%, #FFB976 100%);
+}
+
 .aside__item.opened .aside__item__arrow {
     transform: rotateZ(90deg);
 }
@@ -73,52 +93,16 @@
     background-image: url('../assets/chevron-right.png');
 }
 
-.aside__item-summary div {
-    background-image: url("../assets/chart-pie.png");
+.aside__item-drop-down.selected svg circle {
+    stroke: white;
 }
 
-.aside__item-menu div:first-child {
-    background-image: url("../assets/tools-kitchen-2.png");
-}
-
-.aside__item-tables div:first-child {
-    background-image: url("../assets/container.png");
-}
-
-.aside__item-order-list div:first-child {
-    background-image: url("../assets/list.png");
-}
-
-.aside__item-employers div:first-child {
-    background-image: url("../assets/users.png");
-}
-
-.aside__item-marketing div:first-child {
-    background-image: url("../assets/chart-dots.png");
-}
-
-.aside__item-statistics div:first-child {
-    background-image: url("../assets/chart-bar.png");
-}
-
-.aside__item-settings div:first-child {
-    background-image: url("../assets//settings.png");
-}
-
-.aside__item-subscribe div:first-child {
-    background-image: url("../assets/currency-rubel.png");
-}
-
-.aside__item-support div:first-child {
-    background-image: url("../assets/help.png");
-}
-
-.aside__item-drop-down div {
-    background-image: url("../assets/point.png");
+.aside__item-drop-down.selected div {
+    color: white;
 }
 
 .main__right {
-    width: 78%; /*1128px*/
+    width: 78%;
 }
 
 @media (max-width: 1024px) {
@@ -159,7 +143,7 @@
 
 @media (max-width: 1024px) {
     .main__header__left {
-        width: 30%; /*250*/
+        width: 30%;
     }
 }
 

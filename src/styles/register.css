@@ -146,6 +146,10 @@
     border-radius: 6px;
 }
 
+.register-form label input.invalid {
+    outline-color: red;
+}
+
 .register__i-agree-section {
     display: flex;
     align-items: center;
@@ -169,6 +173,10 @@
 
 .register__i-agree-section > label {
     margin-top: 1.5vh;
+}
+
+.register__i-agree-section > label span {
+    color: red;
 }
 
 .register__i-agree-section a {
