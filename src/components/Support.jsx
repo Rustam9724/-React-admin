@@ -3,7 +3,7 @@ function Support() {
     let faqResult = [];
     for(let i = 1; i <= 9; i++) {
         faqResult.push(
-            <div className="support__faq">
+            <div className="support__faq" key={i}>
                 <div className="support__faq__header">
                     <h4>Accordion Item #{i}</h4>
                     <div></div>
@@ -17,7 +17,7 @@ function Support() {
         <div className="support">
             <h2>Поддержка</h2>
             <div className="support__main">
-                <div className="support__main_section">
+                <div className="support__main__section">
                     <h3>Часто задаваемые вопросы</h3>
                     {faqResult}
                 </div>
