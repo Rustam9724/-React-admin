@@ -19,7 +19,7 @@ function Employers({setOpenComponent, employersListState, setEmployersListState}
             month = `0${month}`
         } 
 
-        employersListState(employersListState.map(emp => {
+        setEmployersListState(employersListState.map(emp => {
             if (emp.id === elem.id) {
                 return {...emp, name: event.target.value, lastChange: `${day}.${month}.${date.getFullYear()}, ${date.getHours()}:${date.getMinutes()}`};
             } else {
@@ -150,57 +150,37 @@ function Employers({setOpenComponent, employersListState, setEmployersListState}
                 <div className="employers__main__header">
                     <div className="employers__main__header__section">
                         <p>ИМЯ ФАМИЛИЯ</p>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="employers__main__header__section">
                         <p>ДОЛЖНОСТЬ</p>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="employers__main__header__section">
                         <p>EMAIL</p>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="employers__main__header__section">
                         <p>ПОСЛЕДНЕЕ ИЗМЕНЕНИЕ</p>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="employers__main__header__section">
                         <p>ДЕЙСТВИЯ</p>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
                     </div>
                 </div>
             </div>  
             <div className="employers__main__list">
                 {employersResult}
                 <div className="employers__main__list__section">
-                <div className="employers__main__list__section__name">
-                    <div>ЖА</div>
-                    <p>Edgar Jones</p>
+                    <div className="employers__main__list__section__name">
+                        <div>ЖА</div>
+                        <p>Edgar Jones</p>
+                    </div>
+                    <div className="employers__main__list__section__post">
+                        <div>Manager</div>
+                    </div>
+                    <div className="employers__main__list__section__email">janet86@hotmail.com</div>
+                    <div className="employers__main__list__section__last-change">22.02.2023, 00:00</div>
+                    <div className="employers__main__list__section__actions">
+                        <div onClick={managerEditClickHandler}></div>
+                    </div>
                 </div>
-                <div className="employers__main__list__section__post">
-                    <div>Manager</div>
-                </div>
-                <div className="employers__main__list__section__email">janet86@hotmail.com</div>
-                <div className="employers__main__list__section__last-change">22.02.2023, 00:00</div>
-                <div className="employers__main__list__section__actions">
-                    <div onClick={managerEditClickHandler}></div>
-                </div>
-            </div>
             </div>
         </div>
     )

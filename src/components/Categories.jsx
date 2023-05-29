@@ -1,8 +1,8 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
 function Categories({categoriesListState, setCategoriesListState, setOpenComponent}) {
-    const [searchValue, setSearchValue] = useState(''); 
-
+    const [searchValue, setSearchValue] = useState('');
+    
     function editCategory(event, elem) {
         const date = new Date();
 
@@ -66,12 +66,6 @@ function Categories({categoriesListState, setCategoriesListState, setOpenCompone
         categoriesResult = categoriesListState;
     }
 
-    const mainListWrapper = useRef(null);
-
-    function scrollUpFunc() {
-        mainListWrapper.current.backgroundColor = 'red';
-    }
-
     categoriesResult = categoriesResult.map(elem => {
         return (
             <div className="categories__main__list__section" key={elem.id}>
@@ -125,33 +119,19 @@ function Categories({categoriesListState, setCategoriesListState, setOpenCompone
                 <div className="categories__main__header">
                     <div className="categories__main__header__section">
                         <p>НАЗВАНИЕ</p>
-                        <div>
-                            <div className={categoriesResult.length > 10 ? 'dark' : null} onClick={scrollUpFunc} ref={mainListWrapper}></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="categories__main__header__section">
                         <p>СТАТУС</p>
-                        <div>
-                            <div className={categoriesResult.length > 10 ? 'dark' : null}></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="categories__main__header__section">
                         <p>ПОСЛЕДНЕЕ ИЗМЕНЕНИЕ</p>
-                        <div>
-                            <div className={categoriesResult.length > 10 ? 'dark' : null}></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="categories__main__header__section">
                         <p>ДЕЙСТВИЯ</p>
                     </div>
                 </div>
                 <div className="categories__main__list">
-                    <div className="categories__main__list__wrapper">
-                        {categoriesResult}
-                    </div>
+                    {categoriesResult}
                 </div>
             </div>
         </div>

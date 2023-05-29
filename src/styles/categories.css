@@ -236,7 +236,7 @@
     box-shadow: 0px 4px 18px rgba(75, 70, 92, 0.1);
     border-radius: 0 0 6px 6px;
     height: 580px;
-    overflow-y: hidden;
+    overflow-y: auto;
     position: relative;
 }
 

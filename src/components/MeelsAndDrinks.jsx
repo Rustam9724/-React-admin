@@ -175,39 +175,23 @@ function MeelsAndDrinks({meelsAndDrinksListState, setMeelsAndDrinksListState, se
                     <div className="meels-and-drinks__main__header__section">
                         <p>НАЗВАНИЕ</p>
                         <div>
-                            <div className={meelsandDrinksResult.length > 10 ? 'dark' : null} onClick={scrollUpFunc} ref={mainListWrapper}></div>
-                            <div></div>
                         </div>
                     </div>
                     <div className="meels-and-drinks__main__header__section">
-                        <p>Цена, руб</p>
-                        <div>
-                            <div className={meelsandDrinksResult.length > 10 ? 'dark' : null} onClick={scrollUpFunc} ref={mainListWrapper}></div>
-                            <div></div>
-                        </div>
+                        <p>ЦЕНА, руб</p>
                     </div>
                     <div className="meels-and-drinks__main__header__section">
                         <p>СТАТУС</p>
-                        <div>
-                            <div className={meelsandDrinksResult.length > 10 ? 'dark' : null}></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="meels-and-drinks__main__header__section">
                         <p>ПОСЛЕДНЕЕ ИЗМЕНЕНИЕ</p>
-                        <div>
-                            <div className={meelsandDrinksResult.length > 10 ? 'dark' : null}></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="meels-and-drinks__main__header__section">
                         <p>ДЕЙСТВИЯ</p>
                     </div>
                 </div>
                 <div className="meels-and-drinks__main__list">
-                    <div className="meels-and-drinks__main__list__wrapper">
-                        {meelsandDrinksResult}
-                    </div>
+                    {meelsandDrinksResult}
                 </div>
             </div>
         </div>

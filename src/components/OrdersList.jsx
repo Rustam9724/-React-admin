@@ -63,51 +63,25 @@ function OrdersList({setOpenComponent, setOpenOrderNumber}) {
                 <div className="orders-list__main__header">
                     <div className="orders-list__main__header__section">
                         <p># ЗАКАЗА</p>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="orders-list__main__header__section">
                         <p>СТОЛ</p>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="orders-list__main__header__section">
                         <p>СУММА, РУБ</p>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="orders-list__main__header__section">
                         <p>СТАТУС</p>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="orders-list__main__header__section">
                         <p>ДАТА СОЗДАНИЯ</p>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
                     </div>
                     <div className="orders-list__main__header__section">
                         <p>ПОСЛЕДНЕЕ ИЗМЕНЕНИЕ</p>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
                     </div>
                 </div>
                 <div className="orders-list__main__list">
-                    <div className="meels-and-drinks__main__list__wrapper">
-                        {ordersResult}
-                    </div>
+                    {ordersResult}
                 </div>
             </div>
         </div>

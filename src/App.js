@@ -4,17 +4,18 @@ import Register from './components/Register';
 import ResetPassword from './components/ResetPassword';
 import Main from './components/Main';
 
+
 function App() {
   return (
     <>
-      <Router basename="/">
-        <Routes>
-          <Route path="/" element={<Login />}/>
-          <Route path="/register" element={<Register />}/>
-          <Route path="/reset-password" element={<ResetPassword />}/>
-          <Route path="/main" element={<Main />}/>
-        </Routes>
-      </Router>
+        <Router basename="/react-admin">
+          <Routes>
+            <Route path="/" element={<Login />}/>
+            <Route path="/register" element={<Register />}/>
+            <Route path="/reset-password" element={<ResetPassword />}/>
+            <Route path="/main" element={<Main />}/>
+          </Routes>
+        </Router>
     </>
   )
 }

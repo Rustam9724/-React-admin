@@ -220,6 +220,26 @@ const orders = [
         lastChange: '28.04.2023, 16:33',
         cost: 550,
         numberOfPositions: 17,
+    },
+    {
+        id: nanoid(),
+        number: 4105,
+        table: 8, 
+        status: 'accepted',
+        date: '07.04.2023, 04:59',
+        lastChange: '28.04.2023, 16:33',
+        cost: 550,
+        numberOfPositions: 17,
+    },
+    {
+        id: nanoid(),
+        number: 4105,
+        table: 8, 
+        status: 'accepted',
+        date: '07.04.2023, 04:59',
+        lastChange: '28.04.2023, 16:33',
+        cost: 550,
+        numberOfPositions: 17,
     }
 ]
 
